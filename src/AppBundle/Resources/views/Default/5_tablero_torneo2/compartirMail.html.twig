@@ -1,0 +1,24 @@
+{% extends 'AppBundle::inicio.html.twig' %}
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="margenes margen-regular anchoLibre">
+            <img id="img-superior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/titleHead/publicar.svg') }}" alt="">
+            <div class="miContenedor bg-white">
+                <div class="container">
+                	<br>
+					<div class="row">
+						<div class="con-md-4 col-md-offset-4">
+							<img style="width:400px; height:400px;" class="img-thumbnail" src="{{ asset('bundles/app/images/gallery/compartirMail.jpg') }}" alt="">
+						</div>
+					</div>
+                </div>
+            </div>
+            <img id="img-inferior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

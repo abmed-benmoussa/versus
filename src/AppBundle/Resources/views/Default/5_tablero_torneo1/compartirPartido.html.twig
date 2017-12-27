@@ -1,0 +1,73 @@
+{% extends 'AppBundle::inicio.html.twig' %}
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="margenes margen-regular anchoLibre">
+            <img id="img-superior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/titleHead/tableroTorneo.svg') }}" alt="">
+            <div class="miContenedor bg-white">
+                <div class="container">
+                	<br>
+			<div class="row">
+			    <div class="col-md-1"><!--sinDefinir--></div>
+        		<div class="col-md-10">
+					<div class="col-md-12 ">
+						<div class="text-center">
+							<div class="col-md-6 ">
+								<h4 class="text-gray" style="font-weight: bold;"><img style="width: 40px; height: 50px;" src="{{ asset('bundles/app/images/gallery/icons/compartir2.svg') }}" alt=""> COMPARTIR RESULTADO DEL PARTIDO</h4>
+							</div>
+							<div class="col-md-6 ">
+								<div class="row">
+									<div class="col-md-12 ">
+										<div class="text-center">
+											<div class="col-md-3"><!--sindefinir--></div>
+											<div class="col-md-3"><!--sindefinir--></div>
+											<div class="col-md-3"><!--sindefinir--></div>
+											<div class="col-md-3">
+												<a href="{{path('select_compartir')}}" class="btn btn-default btn-block text-white " style="font-size: 12px; font-weight: bold; width: 150px;height: 50px; background-color: #465059;"> <img style="width: 30px; height: 30px;" src="{{ asset('bundles/app/images/gallery/icons/compartir1.svg') }}" alt="">&nbsp;&nbsp;&nbsp;Compartir</a>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br><br>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="text-center">
+								<div class="panel panel-danger">
+									<div class="panel-heading" style="background-color:#EF424B; height: 40px; text-align: center;color: white; font-weight: bold; text-align: left;">
+
+											TU PUBLICACIÓN
+									</div>
+
+									<div class="panel-body fondo-blanco">
+										<div class="col-md-12 ">
+											<div class="text-center">
+												<br><br>
+												<img style="width: 700px; height: 400px;" src="{{ asset('bundles/app/images/gallery/compartir_result.jpg') }}" alt="" class="sombra-tabla">
+												<br><br>
+											</div>
+											<br>
+										</div>
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br>
+					</div>
+				</div>
+				<div class="col-md-1"><!--sinDefinir--></div>
+			</div>
+                </div>
+            </div>
+            <img id="img-inferior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

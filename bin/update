@@ -1,0 +1,5 @@
+echo "arsd\$\$2912"
+git pull origin $(git rev-parse --abbrev-ref HEAD)
+rm -rf var/logs/* && php bin/console cache:clear --env=prod --no-debug
+php bin/console doctrine:schema:update --force --env=prod
+php bin/console assets:install public --symlink --relative --env=prod

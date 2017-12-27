@@ -1,0 +1,42 @@
+{% extends 'AppBundle::inicio.html.twig' %}
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="margenes margen-regular anchoLibre">
+            <img id="img-superior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/titleHead/conectarCuentas.svg') }}" alt="">
+            <div class="miContenedor bg-white">
+                <div class="container">
+                    <div class="text-center">
+                        <img class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/mail.png') }}" alt="">
+                        <br><br>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <a href="{{path('conectar_google')}}"><img src="{{ asset('bundles/app/images/buttons/google.png') }}" alt="" class="img-thumbnail-none"></a>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <a href="{{path('conectar_outlook')}}"><img src="{{ asset('bundles/app/images/buttons/outlook.png') }}" alt="" class="img-thumbnail-none"></a>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <a href="{{path('conectar_yahoo')}}"><img src="{{ asset('bundles/app/images/buttons/yahoo.png') }}" alt="" class="img-thumbnail-none"></a>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <a href="{{path('inicio')}}" class="btn btn-mail text-white btn-lg btn-block"><b>Siguiente</b></a>
+                        </div>
+                    </div>
+
+                    <br>
+                </div>
+            </div>
+            <img id="img-inferior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

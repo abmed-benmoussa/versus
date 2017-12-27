@@ -1,0 +1,193 @@
+BackendBundle\Entity\Torneos:
+    type: entity
+    repositoryClass: \BackendBundle\Repository\TorneosRepository
+    table: torneos
+    indexes:
+        fk_torneos_tipotorneos1_idx:
+            columns:
+                - tipotorneos_id
+        fk_torneos_fosuser1_idx:
+            columns:
+                - user_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombre:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        fechaInicio:
+            type: date
+            nullable: true
+            column: fecha_inicio
+        fechaFinal:
+            type: date
+            nullable: true
+            column: fecha_final
+        diasJugar:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: dias_jugar
+        partidosDia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: partidos_dia
+        duracionPartido:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: duracion_partido
+        horario:
+            type: time
+            nullable: true
+        numeroEquipos:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: numero_equipos
+        logo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        imageFile:
+            mapping: torneo_images
+            filename_property: logo
+            nullable: true
+        descripcion:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+
+        numeroGrupos:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        equiposGrupos:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        equiposClasifican:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        partidosIdavuelta:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        partidosUnicoidavuelta:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        playoffInstancia:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+
+        numeroGruposcombinado:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        equiposGruposcombinado:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        equiposClasificancombinado:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        partidosIdavueltacombinado:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+
+        partidosUnicoidavueltaplayoff:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        playoffInstanciaplayoff:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+
+        latLng:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+        direccion:
+            type: string
+            nullable: true
+            length: 300
+            options:
+                fixed: false
+        updatedAt:
+            type: datetime
+            nullable: true
+    manyToOne:
+        tipotorneos:
+            targetEntity: Tipotorneos
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                tipotorneos_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        user:
+            targetEntity: User
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                user_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    manyToMany:
+        equipos:
+            targetEntity: Equipos
+            inversedBy: torneos
+            cascade: ["persist"]
+            joinTable:
+                name: torneos_equipos
+                joinColumns:
+                     torneo_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    equipo_id:
+                        referencedColumnName: id
+
+    lifecycleCallbacks: {  }

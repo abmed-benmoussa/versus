@@ -1,0 +1,3 @@
+cargar-equipos:
+    path: /cargar-equipos/{id}
+    defaults: { _controller: AppBundle:Jugadores:crearjugadores }

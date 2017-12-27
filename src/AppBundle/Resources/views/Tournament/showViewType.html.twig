@@ -1,0 +1,152 @@
+{% extends 'AppBundle::inicio.html.twig' %}
+{% set modality = ['', 'Partido único','Partidos de ida','Ida y Vuelta'] %}
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+    <div class="row">
+        <div class="col-md-12 ">
+            <img class="img-thumbnail-none margen-superior" src="{{ asset('bundles/app/images/titleHead/misTorneos.svg') }}" alt="">
+            <div class="bg-white margen-misTorneos">
+                <div class="row" style="padding:1%">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading text-center">Numero de equipos</div>
+                                    <div class="panel-body text-center"><b>{{entity.numeroEquipos}} Equipos</b></div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading text-center">Numero de grupos</div>
+                                    <div class="panel-body text-center">
+                                    {% if entity.teamsPerGroups %}
+                                        <b>{{entity.numeroEquipos/entity.teamsPerGroups}} Grupos</b>
+                                    {% else %}
+                                        <br>
+                                    {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading text-center">Equipos por grupo</div>
+                                    <div class="panel-body text-center"><b>{{entity.teamsPerGroups}} Equipos por Grupo</b></div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading text-center">Modalidad de juego</div>
+                                    <div class="panel-body text-center">
+                                        <b>{{modality[entity.groupMatchModality|default(entity.playoffMatchModality)]}}</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        {% if viewtype == 'dates' %}
+                        <div class="row">
+                            {% for round, games in gameList %}
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="group-name text-left">
+                                            Fecha {{round}}
+                                        </div>
+                                    </div>
+                                    {% for game in games %}
+                                        <div class="col-md-12">
+                                            <div class="group-team">
+                                                <div class="row">
+                                                    <div class="col-xs-5">
+                                                        <img class="img-svg-size pull-left" src="{{ asset('bundles/app/images/gallery/icons/team.svg') }}" alt="">
+                                                        <span class="pull-left">{{game.homeTeam.team}}</span>
+                                                    </div>
+                                                    <div class="col-xs-2 text-center">0 - 0</div>
+                                                    <div class="col-xs-5">
+                                                        <img class="img-svg-size pull-right" src="{{ asset('bundles/app/images/gallery/icons/team.svg') }}" alt="">
+                                                        <span class="pull-right">{{game.visitTeam.team}}</span>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <div class="group-location">
+                                                            19:00 - Futbol City - cancha 2
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        {% elseif viewtype == 'groups' %}
+                        <div class="row">
+                            {% for name, group in gameList %}
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="group-name text-center">
+                                                Grupo {{name}}
+                                            </div>
+                                        </div>
+                                        {% for item in group %}
+                                            <div class="col-md-12">
+                                                <div class="group-team">
+                                                    <img class="img-svg-size pull-left" src="{{ asset('bundles/app/images/gallery/icons/team.svg') }}" alt="">
+                                                    {{item.team}}
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        {% else %}
+                        <div class="row">
+                            {% for name, games in gameList %}
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="group-name text-center">
+                                                Grupo {{name}}
+                                            </div>
+                                        </div>
+                                        {% for game in games %}
+                                            <div class="col-md-12">
+                                                <div class="group-team">
+                                                    <div class="row">
+                                                        <div class="col-xs-5">
+                                                            <img class="img-svg-size pull-left" src="{{ asset('bundles/app/images/gallery/icons/team.svg') }}" alt="">
+                                                            <span class="pull-left">{{game.homeTeam.team}}</span>
+                                                        </div>
+                                                        <div class="col-xs-2 text-center">0 - 0</div>
+                                                        <div class="col-xs-5">
+                                                            <img class="img-svg-size pull-right" src="{{ asset('bundles/app/images/gallery/icons/team.svg') }}" alt="">
+                                                            <span class="pull-right">{{game.visitTeam.team}}</span>
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            <div class="group-location">
+                                                                19:00 - Futbol City - cancha 2
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <img class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+            <div class="clearfix"></div>
+        </div>
+      </div>
+{% endblock %}

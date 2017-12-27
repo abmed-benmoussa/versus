@@ -1,0 +1,80 @@
+{% extends 'AppBundle::inicio.html.twig' %}
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+    <div class="row">
+        <div class="col-md-12 ">
+            <img class="img-thumbnail-none margen-superior" src="{{ asset('bundles/app/images/titleHead/miCuenta.svg') }}" alt="">
+            <div class="bg-white margen-misTorneos">
+                
+                <div class="row" style="padding:1%">
+                    
+                    <div class="col-md-6">
+                        
+                        <a href="{{url('app_player_pj', {id: app.user.id})}}">
+                            <div class="btn-misTorneos" style="background-image: url('{{ asset('bundles/app/images/buttons/pj.png') }}');padding-left: 120px; padding-right: 20px; height: 120px;;color: white;background-repeat: no-repeat;font-size: 20px;">
+                                <br>
+                            </div>
+                          </a>
+                    </div>
+
+                    <div class="col-md-6">
+                        
+                        <a href="{{url('app_player_ga', {id: app.user.id})}}">
+                            <div class="btn-misTorneos" style="background-image: url('{{ asset('bundles/app/images/buttons/ga.png') }}');padding-left: 120px; padding-right: 20px; height: 120px;;color: white;background-repeat: no-repeat;font-size: 20px;">
+                                <br>
+                            </div>
+                          </a>
+                    </div>
+                    
+                </div>
+                <div class="row" style="padding:1%">
+                    
+                    <div class="col-md-6">
+                        
+                        <a href="{{url('app_player_as', {id: app.user.id})}}">
+                            <div class="btn-misTorneos" style="background-image: url('{{ asset('bundles/app/images/buttons/as.png') }}');padding-left: 120px; padding-right: 20px; height: 120px;;color: white;background-repeat: no-repeat;font-size: 20px;">
+                                <br>
+                            </div>
+                          </a>
+                    </div>
+
+                    <div class="col-md-6">
+                        
+                        <a href="{{url('app_player_tra', {id: app.user.id})}}">
+                            <div class="btn-misTorneos" style="background-image: url('{{ asset('bundles/app/images/buttons/tra.png') }}');padding-left: 120px; padding-right: 20px; height: 120px;;color: white;background-repeat: no-repeat;font-size: 20px;">
+                                <br>
+                            </div>
+                          </a>
+                    </div>
+                    
+                </div>
+                <div class="row" style="padding:1%">
+                    
+                    <div class="col-md-6">
+                        
+                        <a href="{{url('app_player_vtc', {id: app.user.id})}}">
+                            <div class="btn-misTorneos" style="background-image: url('{{ asset('bundles/app/images/buttons/ata.png') }}');padding-left: 120px; padding-right: 20px; height: 120px;;color: white;background-repeat: no-repeat;font-size: 20px;">
+                                <br>
+                            </div>
+                          </a>
+                    </div>
+
+                    <div class="col-md-6">
+                        
+                        <a href="{{url('app_player_vtc', {id: app.user.id})}}">
+                            <div class="btn-misTorneos" style="background-image: url('{{ asset('bundles/app/images/buttons/vtc.png') }}');padding-left: 120px; padding-right: 20px; height: 120px;;color: white;background-repeat: no-repeat;font-size: 20px;">
+                                <br>
+                            </div>
+                          </a>
+                    </div>
+                    
+                </div>
+                <br>
+            </div>
+            <img class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+            
+            <div class="clearfix"></div>
+        </div>
+      </div>
+
+{% endblock %}

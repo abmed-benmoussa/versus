@@ -1,0 +1,52 @@
+{% extends 'AppBundle::layout.html.twig' %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="margenes">
+            <img id="img-superior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/titleHead/iniciarSesion.svg') }}" alt="">
+            <div class="miContenedor margen-login bg-black">
+                <div class="container">
+                    <div class="margen-login text-center text-white">
+                    <div class="text-center">
+                        <h3>Usuario Registrado</h3>
+                        <br><br>
+                    </div>
+                    <div class="input-group">
+                    <p class="text-white">
+                      Registrado como {{user.username}} |
+                      <a href="{{ path('fos_user_security_logout') }}">
+                          {{ 'Salir'|trans({}, 'FOSUserBundle') }}
+                      </a>
+                    </p>
+                    <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
+                    {% if targetUrl %}
+                    <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
+                    {% endif %}
+                    </div>
+
+                    <br>
+                    <br>
+                    <br>
+
+                </div>
+                
+
+                </div>
+            </div>
+            </form>
+            <img id="img-inferior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+            <img id="balon" class="balon img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/balon.png') }}" alt="">
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <img id="img-superior" class="img-thumbnail-none publicidad1" src="{{ asset('bundles/app/images/publicidad/publicidad1.png') }}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

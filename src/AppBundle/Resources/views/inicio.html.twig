@@ -1,0 +1,69 @@
+{% extends 'AppBundle::layout.html.twig' %}
+{% block stylesheets %}{% endblock %}
+{% block javascripts %}{% endblock %}
+{% block menu %}
+<!--menu superior-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><!--aqui va el enlace para recargar ir al inicio--></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!-- ul class="nav navbar-nav"-->
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="fondo-blanco iconArrowLeft"><a href="javascript:history.back()"><i class="fa fa-angle-double-left text-white-icon"></i></span></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown fondo-blanco fondo-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bars text-white-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{path('app_homepage')}}"><span><i class="fa fa-building-o"></i>&nbsp;</span> Inicio</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="{{path('app_team_index')}}"><span><i class="fa fa-shield"></i>&nbsp;</span>Equipos</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="{{path('app_tournament_index')}}"><span><i class="fa fa-trophy"></i>&nbsp;</span>Torneos</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="{{path('app_player_index')}}"><span><i class="fa fa-user-o"></i>&nbsp;</span>Mi Cuenta</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="{{path('fos_user_profile_show')}}"><span><i class="fa fa-cogs"></i>&nbsp;</span>Perfil</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="{{path('fos_user_profile_edit')}}"><span><i class="fa fa-key"></i>&nbsp;</span>Configuraciones</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="{{path('fos_user_security_logout')}}"><span><i class="fa fa-sign-out"></i>&nbsp;</span>Sign Out</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+<!--menu inferior-->
+    <nav id="barraInferior" class="navbar navbar-default navbar-fixed-bottom ">
+        <ul class="nav navbar-nav navbar-right fondo-blanco">
+            <li class="text-center" style="width:50px;"><br>
+                <i class="fa fa-user-circle-o text-icon-size text-white" aria-hidden="true"></i>
+            </li>
+            <li style=" width:150px;">
+                <a href="#" class="text-white"><b>{{app.user.username}}</b> <br>Delantero</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                {% block publicidad1%}
+                {% endblock %}
+            </li>
+        </ul>
+    </nav>
+
+{% endblock %}
+{% block contenidos %}<a href="{{ path('fos_user_security_login') }}">Login</a> {% endblock %}

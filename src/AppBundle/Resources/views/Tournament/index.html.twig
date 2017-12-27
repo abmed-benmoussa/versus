@@ -1,0 +1,41 @@
+{% extends 'AppBundle::inicio.html.twig' %}
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+    <div class="row">
+        <div class="col-md-12 ">
+            <img class="img-thumbnail-none margen-superior" src="{{ asset('bundles/app/images/titleHead/misTorneos.svg') }}" alt="">
+            <div class="bg-white margen-misTorneos">
+                <div class="count">
+                    <span class="col-md-4">
+                      Total Torneos : {{pagination.getTotalItemCount}}
+                    </span>
+                </div>
+                <br>
+                {% if pagination is empty %}
+                <div class="col-md-4">
+                     <p>No tiene torneos creados</p>
+                </div>
+                {% endif %}
+                <div class="row" style="padding:1%">
+                    {% for torneos in pagination %}
+                    <div class="col-md-4">
+                        {% set route = 'app_tournament_'~(torneos.step == 4 ? 'show' : 'edit') %}
+                        <a href="{{path(route,{ 'id': torneos.id })}}">
+                            <div class="btn-misTorneos" style="background-image: url('{{ asset('bundles/app/images/buttons/btn_original.png') }}');padding-left: 120px; padding-right: 20px; height: 120px;;color: white;background-repeat: no-repeat;font-size: 20px;">
+                                <br>{{torneos.name}}
+                            </div>
+                          </a>
+                      </div>
+                    {% endfor %}
+                </div>
+                <br>
+            </div>
+            <img class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+            <div class="navigation">
+                  {{knp_pagination_render(pagination)}}
+            </div>
+            <div class="clearfix"></div>
+        </div>
+      </div>
+
+{% endblock %}

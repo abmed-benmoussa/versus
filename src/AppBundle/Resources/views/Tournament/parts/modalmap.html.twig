@@ -1,0 +1,46 @@
+<div id="modal-map" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Ligar/Dirección">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        {{ form_row(form.tournamentLocations) }}
+                        <div class="text-center">
+                            <br><a class="btn btn-info btn-lg">Añadir dirección</a>
+                            {# #34C15A #}
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <hr style="border: 1px dashed #505050;margin:0px;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p style="font-weight: bold;color: #505050;font-size: 12px; margin-top: 10px;margin-bottom: 10px;">
+                            Direcciones registradas:
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <ul class="list-group address-list" data-index="{{entity.tournamentLocations.count}}">
+                            {% for index, item in entity.tournamentLocations %}
+                            <li class="list-group-item">
+                                <a class="btn btn-danger btn-xs pull-right">Eliminar</a>
+                                {{item}}
+                                <div>
+                                    <div id="{{form.tournamentLocations.vars.prototype.vars.id|replace({'__name__':index})}}">
+                                        {% for name,child in form.tournamentLocations.vars.prototype.children %}
+                                            <input id="{{child.vars.id|replace({'__name__':index})}}" name="{{child.vars.full_name|replace({'__name__':index})}}" value="{{attribute(item, name)}}" type="hidden">
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>

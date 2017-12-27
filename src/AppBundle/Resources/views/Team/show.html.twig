@@ -1,0 +1,51 @@
+{% extends 'AppBundle::inicio.html.twig' %}
+
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+<img id="img-superior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/titleHead/creaTuTorneo.svg') }}" alt="">
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="margenes">
+            <div class="miContenedor margen-login bg-black">
+                <div class="margen-login text-center text-white">
+                    <div class="text-center">
+                        <div class="avatar-container">
+                            {% if not equipo.image %}
+                            <div class="avatar img-circle img-thumbnail trigger-avatar"></div>
+                            {% else %}
+                            {%set imagen=equipo.image|split('images')|last %}
+                            <img src="{{ asset('/uploads/images' ~ imagen) }}" class="avatar img-circle img-thumbnail" alt="avatar" width="200" height="200" style="height:200px">
+                            {% endif %}
+                            <br><br>
+                        </div>
+                        <table class="table">
+                            <tr>
+                                <td>Nombre del equipo</td>
+                                <td>{{ equipo.name}}</td>
+                            </tr>
+                            <tr>
+                                <td>Grupo</td>
+                                <td>{{ equipo.group }}</td>
+                            </tr>
+                            <tr>
+                                <td>Numero</td>
+                                <td>{{ equipo.number }}</td>
+                            </tr>
+                         </table>
+                    </div>
+                    <br><br><br><br>
+                    <div class="text-center">
+                        <a class="btn bg-gray-trans btn-scuare btn-block text-gray-light" href="{{ path('app_team_edit', { 'id': equipo.id }) }}" >Editar Equipo</a>
+                        <a class="btn bg-gray-trans btn-scuare btn-block text-gray-light" href="#" >Ver Jugadores</a>
+                    </div>
+                </div>
+                <br><br><br>
+            </div>
+        </div>
+    </div>
+    <img id="img-inferior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+    <img id="balon" class="balon img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/balon.png') }}" alt="">
+</div>
+</div>
+
+{% endblock %}

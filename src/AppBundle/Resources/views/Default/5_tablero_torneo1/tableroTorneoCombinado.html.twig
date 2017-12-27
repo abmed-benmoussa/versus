@@ -1,0 +1,100 @@
+{% extends 'AppBundle::inicio.html.twig' %}
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="margenes margen-regular anchoLibre">
+            <img id="img-superior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/titleHead/tableroTorneo.svg') }}" alt="">
+            <div class="miContenedor bg-white">
+                <div class="container">
+
+            		<div class="row">
+            			<div class="col-md-12">
+            				<h4 class="text-gray" style="font-weight: bold;">
+								<img style="width: 50px; height: 50px;" src="{{ asset('bundles/app/images/gallery/icons/fixture_gris.svg') }}" alt="">
+								FIXTURE COMPLETO
+							</h4>
+            			</div>
+            		</div>
+
+					<div class="row">
+		        		<div class="col-md-12">
+							<div class="row">
+								<div class="col-md-3">
+									<div class="panel-ttpf1 panel-default">
+										<div class="panel-heading  bg-danger text-white text-center">
+											<b> INFORMACIÓN</b>
+										</div>
+										<div class="panel-body">
+											<div class="panel-ttpf1 panel-default">
+												<div class="panel-heading bg-gray-light">
+													<h3 class="panel-title text-center text-gray2" style="font-weight:bold;font-size: 12px;">NÚMERO DE EQUIPOS</h3>
+												</div>
+												<div class="panel-body text-gray bg-white">
+													<b>8 Equipos</b> <span><i style="float: right" class="fa fa-pencil text-gray"></i></span>
+												</div>
+											</div>
+											<div class="panel-ttpf1 panel-default">
+												<div class="panel-heading bg-gray-light">
+													<h3 class="panel-title text-center text-gray2" style="font-weight:bold;font-size: 12px;">NÚMERO DE GRUPOS</h3>
+												</div>
+												<div class="panel-body text-gray bg-white">
+													<b>2 Grupos</b> <span><i style="float: right" class="fa fa-pencil text-gray"></i></span>
+												</div>
+											</div>
+											<div class="panel-ttpf1 panel-default">
+												<div class="panel-heading bg-gray-light">
+													<h3 class="panel-title text-center text-gray2" style="font-weight:bold;font-size: 12px;">EQUIPOS POR GRUPO</h3>
+												</div>
+												<div class="panel-body text-gray bg-white">
+													<b>4 Equipos por Grupo</b> <span><i style="float: right" class="fa fa-pencil text-gray"></i></span>
+												</div>
+											</div>
+											<div class="panel-ttpf1 panel-default">
+												<div class="panel-heading bg-gray-light">
+													<h3 class="panel-title text-center text-gray2" style="font-weight:bold;font-size: 12px;">PARTIDOS IDA Y VUELTA</h3>
+												</div>
+												<div class="panel-body text-gray bg-white">
+													<b>Partidos de Ida</b> <span><i style="float: right" class="fa fa-pencil text-gray"></i></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-9">
+									<div class="panel-ttpf1 panel-default">
+										<div class="panel-heading  bg-danger text-white text-center">
+											<b> MODALIDADES DE TORNEO COMBINADO</b>
+										</div>
+										<div class="panel-body bg-white">
+											<div class="col-md-12 ">
+												<div class="text-center">
+													<div class="col-md-6 " align="right">
+														<br><br><br><br><br><br>
+														<a href="{{path('tablero_torneo_grupos')}}" class="btn btn-danger btn-block" style="font-weight: bold;"><img style="width: 60px; height: 40px;" src="{{ asset('bundles/app/images/gallery/icons/grupos_amarillo.svg') }}" alt="">Grupos</a>
+													</div>
+													<div class="col-md-6">
+														<br><br><br><br><br><br>
+														<a href="{{path('tablero_torneo_playoof1')}}" class="btn btn-danger btn-block" style="font-weight: bold;"><img style="width: 60px; height: 40px;" src="{{ asset('bundles/app/images/gallery/icons/playoff_amarillo.svg') }}" alt="">Playoof</a>
+														<br><br><br><br><br><br><br><br><br><br><br>
+													</div>
+													<br>
+												</div>
+												<br>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+                </div>
+            </div>
+            <img id="img-inferior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

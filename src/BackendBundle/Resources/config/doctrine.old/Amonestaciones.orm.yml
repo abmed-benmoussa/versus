@@ -1,0 +1,41 @@
+BackendBundle\Entity\Amonestaciones:
+    type: entity
+    table: amonestaciones
+    indexes:
+        fk_amonestaciones_jugadores1_idx:
+            columns:
+                - jugadores_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombre:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        observacion:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+    oneToOne:
+        jugadores:
+            targetEntity: Jugadores
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                jugadores_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

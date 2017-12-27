@@ -1,0 +1,50 @@
+{% extends 'AppBundle::inicio.html.twig' %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+<img class="img-thumbnail-none margen-superior" src="{{ asset('bundles/app/images/titleHead/miCuenta.svg') }}" alt="">
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="margenes">
+            
+            <div class="miContenedor margen-login bg-black">
+                <div class="container">
+                    <div class="margen-login text-center text-white">
+                    <div class="text-center">
+                        <h3>Datos del usuario</h3>
+                        <br><br>
+                    </div>
+                    <div class="text-center">
+                        <p>{{ 'Nombre de usuario'|trans }}: {{ user.username }}</p>
+                        <p>{{ 'Email'|trans }}: {{ user.email }}</p>
+                    </div>
+                    
+                    <br><br><br><br>
+                    <div class="text-center">
+                      <a id="btn-forgot-pwd" href="{{path('fos_user_profile_edit')}}" class="mlm text-white"> Editar Datos</a>
+                      <a id="btn-forgot-pwd" href="{{path('fos_user_change_password')}}" class="mlm text-white"> Cambiar Contraseña</a>
+                      <a id="btn-forgot-pwd" href="{{path('fos_user_security_logout')}}" class="mlm text-white"> Salir</a>
+                    </div>
+                    </div>
+
+                    <br>
+                    <br>
+                    <br>
+
+                </div>
+                
+
+                </div>
+            </div>
+            </form>
+            <img id="img-inferior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+            <img id="balon" class="balon img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/balon.png') }}" alt="">
+        </div>
+        
+    </div>
+</div>
+
+{% endblock %}
+
+

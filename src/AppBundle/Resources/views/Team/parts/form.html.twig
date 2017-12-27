@@ -1,0 +1,63 @@
+{% set color = entity.color|default('#FFFFFF') %}
+<br>
+<div class="row">
+    <div class="col-md-2">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="avatar-container">
+                    {% if not entity.image %}
+                    <div class="avatar img-circle img-thumbnail trigger-avatar"></div>
+                    {% endif %}
+                    {%set imagen=entity.image|split('images')|last %}
+                    <img src="{{ asset('/uploads/images' ~ imagen) }}" class="avatar img-circle img-thumbnail {% if not entity.image %}hide{% endif %} trigger-avatar" alt="avatar">
+                    <div class="hide">
+                        {{ form_widget(form.image) }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 text-center">
+                <div class="color-team img-circle img-thumbnail trigger-color" style="border-color:{{color}}">
+                    {% include 'AppBundle:Team/parts:shirt.html.twig' %}
+                    {{ form_widget(form.color) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-10">
+        <div class="row">
+            <div class="col-md-9 col-xs-12">
+                <div class="form-group">
+                    <label class="ct-label" for="">Nombre del equipo</label>
+                    <div class="input-group input-group-big">
+                        {{ form_widget(form.name) }}
+                        <div class="input-group-addon ct-addon-especial">
+                            <i style="font-size:20px;border-bottom: 1px solid #505050" class="fa fa-pencil"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-12">
+                <a id="trigger-players-file" class="btn btn-load-team btn-block btn-danger">
+                    Cargar Equipo (Excel)
+                </a>
+                <div class="hide">
+                    {{ form_widget(form.playersfile) }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for player in entity.players %}
+            <a data-endpoint="{{url('app_player_edit', {id: player.id})}}" class="col-md-2 col-xs-6 text-center player-container" data-toggle="modal" data-target="#modal-player">
+                {%set imagen=player.user.image|split('images')|last %}
+                {% if imagen is not empty %}
+                 <img src="{{ asset('/uploads/images' ~ imagen) }}" style="border-color:{{color}}" class="img-circle img-thumbnail" alt="avatar" width="80" height="80">
+                {%else%}
+                 <img src="{{ asset('/bundles/app/images/gallery/player.png') }}" style="border-color:{{color}}" class="img-circle img-thumbnail" alt="avatar" width="80" height="80">
+                {%endif%}
+                <span style="border-color:{{color}}">{{player}}</span>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{{ form_rest(form) }}

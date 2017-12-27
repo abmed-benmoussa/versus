@@ -1,0 +1,47 @@
+{% extends 'AppBundle::inicio.html.twig' %}
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+
+<div class="row">
+    <div class="col-md-12 ">
+        <div class="margenes margen-regular ">
+            <img id="img-superior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/titleHead/miCuenta.svg') }}" alt="">
+            <div class="miContenedor bg-white">
+                <div class="container">
+                    <br>
+                   <div class="row">
+
+                        <div class="col-md-5 col-md-offset-1">
+                            <a href="{{path('partidos_jugados')}}"><img class="img-thumbnail-none" src="{{ asset('bundles/app/images/buttons/partidosJugados.svg') }}" alt=""></a>
+                        </div>
+                        <div class="col-md-5">
+                            <a href="{{path('goles_anotados')}}"><img class="img-thumbnail-none" src="{{ asset('bundles/app/images/buttons/golesAnotados.svg') }}" alt=""></a>
+                        </div>
+
+                   </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <a href="{{path('asistencias')}}"><img class="img-thumbnail-none" src="{{ asset('bundles/app/images/buttons/asistencias.svg') }}" alt=""></a>
+                        </div>
+                        <div class="col-md-5">
+                            <a href="{{path('tarjetas')}}"><img class="img-thumbnail-none" src="{{ asset('bundles/app/images/buttons/tarjetasRojaAmarilla.svg') }}" alt=""></a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <a href="{{path('atajadas')}}"><img class="img-thumbnail-none" src="{{ asset('bundles/app/images/buttons/atajadas.svg') }}" alt=""></a>
+                        </div>
+                        <div class="col-md-5">
+                            <a href="{{path('consolidada')}}"><img class="img-thumbnail-none" src="{{ asset('bundles/app/images/buttons/consolidada.svg') }}" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img id="img-inferior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'AppBundle::inicio.html.twig' %}
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="margenes margen-regular anchoLibre">
+            <img id="img-superior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/titleHead/tableroTorneo.svg') }}" alt="">
+            <div class="miContenedor bg-white">
+                <div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="partidos_postergados-title" style=" color:#465058;font-size: 30px; PADD">
+								<img style="width: 50px; height: 50px;"  class="img-thumbnail-none"  src="{{ asset('bundles/app/images/gallery/icons/compartirEstadisticas.svg') }}" alt=""> COMPARTIR ESTADÍSTICAS
+							</div>
+						</div>
+					</div>
+					<div class="tableroTpanel panel-danger">
+						<div class="panel-heading bg-danger" style="color:white !important; font-weight: bold;">SELECCIONA LAS ESTADISTICAS QUE DESEES PUBLICAR</div>
+						<div class="panel-body bg-black">
+
+							<div class="row">
+								<div class="col-md-6"  style="text-align:right!important">
+									<a href="compartir_posiciones">
+										<img id="img-superior" style="width: 400px;" class="img-thumbnail-none tt2-img" src="{{ asset('bundles/app/images/gallery/icons/tablaPosiciones.svg') }}" alt="">
+									</a>
+								</div>
+								<div class="col-md-6">
+									<a href="#">
+										<img id="img-superior" style="width: 400px;" class="img-thumbnail-none tt2-img" src="{{ asset('bundles/app/images/gallery/icons/tablaGoleadores.svg') }}" alt="">
+									</a>
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-md-6" style="text-align:right!important">
+									<a href="#">
+										<img id="img-superior" class="img-thumbnail-none tt2-img" style="width: 400px" src="{{ asset('bundles/app/images/gallery/icons/tablaExpulAmon.svg') }}" alt="">
+									</a>
+								</div>
+								<div class="col-md-6">
+									<a href="#">
+										<img id="img-superior" class="img-thumbnail-none tt2-img" style="width: 400px" src="{{ asset('bundles/app/images/gallery/icons/tablaAsistencias.svg') }}" alt="">
+									</a>
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-md-6 col-md-offset-3" style="text-align:center!important">
+									<a href="#">
+										<img id="img-superior" class="img-thumbnail-none tt2-img" style="width: 400px" src="{{ asset('bundles/app/images/gallery/icons/todasLasTablas.svg') }}" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+            </div>
+            <img id="img-inferior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

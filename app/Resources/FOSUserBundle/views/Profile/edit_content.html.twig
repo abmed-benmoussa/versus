@@ -1,0 +1,70 @@
+{% extends 'AppBundle::inicio.html.twig' %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+<img class="img-thumbnail-none margen-superior" src="{{ asset('bundles/app/images/titleHead/miCuenta.svg') }}" alt="">
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="margenes">
+            
+            <div class="miContenedor margen-login bg-black">
+                <div class="container">
+                    <div class="margen-login text-center text-white">
+                    <div class="text-center">
+                        <h3>Editar del usuario</h3>
+                        <br><br>
+                    </div>
+                    <form action="{{ path("fos_user_profile_edit") }}" method="post" class="form-horizontal">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                        {{ form_widget(form.username, { 'attr': {'class': 'form-control', 'placeholder': 'Nombre de Usuario'|trans } }) }}
+                    </div>
+                    {{ form_errors(form.username) }}
+                    <br>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+                        {{ form_widget(form.email, { 'attr': {'class': 'form-control', 'placeholder': 'Email'|trans } }) }}
+                    </div>
+                    {{ form_errors(form.email) }}
+                    <br>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-key"></i></div>
+                        {{ form_widget(form.current_password, { 'attr': {'class': 'form-control', 'placeholder': 'Contraseña'|trans } }) }}
+                    </div>
+                    {{ form_errors(form.current_password) }}
+                    {{ form_rest(form) }}
+                    <br>
+                    <br>
+                    <input type="submit" class="btn btn-lg btn-danger btn-block" id="_submit" name="_submit" value="Actualizar" />
+                    <br>
+                    <br><br><br><br>
+                    <div class="text-center">
+                      <a id="btn-forgot-pwd" href="{{path('fos_user_profile_edit')}}" class="mlm text-white"> Editar Datos</a>
+                      <a id="btn-forgot-pwd" href="{{path('fos_user_change_password')}}" class="mlm text-white"> Cambiar Contraseña</a>
+                      <a id="btn-forgot-pwd" href="{{path('fos_user_security_logout')}}" class="mlm text-white"> Salir</a>
+                    </div>
+                    </div>
+
+                    <br>
+                    <br>
+                    <br>
+
+                </div>
+                
+
+                </div>
+            </div>
+            </form>
+            <img id="img-inferior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+            <img id="balon" class="balon img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/balon.png') }}" alt="">
+        </div>
+        
+    </div>
+</div>
+
+{% endblock %}
+
+
+

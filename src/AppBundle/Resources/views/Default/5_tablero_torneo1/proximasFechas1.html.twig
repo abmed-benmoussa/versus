@@ -1,0 +1,480 @@
+{% extends 'AppBundle::inicio.html.twig' %}
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="margenes margen-regular anchoLibre">
+            <img id="img-superior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/titleHead/tableroTorneo.svg') }}" alt="">
+            <div class="miContenedor bg-white">
+                <div class="container">
+                	<br>
+		<div class="row">
+		    <div class="col-md-1"><!--sinDefinir--></div>
+    		<div class="col-md-10">
+				<div class="col-md-12 ">
+					<div class="text-center">
+						<div class="col-md-4 ">
+							<table style="width: 100%;">
+								<tr>
+									<td>
+										<img style="width: 50px; height: 50px;" src="{{ asset('bundles/app/images/gallery/icons/proximas_fechas.svg') }}" alt="">
+									</td>
+									<td style="width: 5px;"></td>
+									<td>
+										<h4 class="text-gray" align="left" style="font-weight: bold;">PRÓXIMAS FECHAS, PARTIDOS Y HORARIOS</h4>
+									</td>
+								</tr>
+							</table>
+
+						</div>
+						<div class="col-md-8 ">
+							<div class="row">
+								<div class="col-md-12 ">
+									<div class="text-center">
+										<div class="col-md-2"><!--sindefinir--></div>
+										<div class="col-md-2"><!--sindefinir--></div>
+										<div class="col-md-2"><!--sindefinir--></div>
+										<div class="col-md-6">
+											<!--sindefinir-->
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br><br>
+				<div class="row">
+					<div class="col-md-12">
+							<br>
+							<table align="center" class="table text-gray" style="width: 100%">
+								<tr class="text-center">
+									<td style="background-color:#EF424B; height: 40px;  color: white; font-weight: bold; border-radius: 5px 0px 0px 0px ;">
+										FECHA
+									</td>
+									<td style="background-color:#EF424B; height: 40px;  color: white; font-weight: bold; border-radius: 0px 0px 0px 0px ;">
+										HORA
+									</td>
+									<td style="background-color:#EF424B; height: 40px; color: white; font-weight: bold; border-radius: 0px 0px 0px 0px ;">
+										DUELO
+									</td>
+
+									<td style="background-color:#EF424B; height: 40px; width: 370px; color: white; font-weight: bold; border-radius: 0px 0px 0px 0px ;">
+										LUGAR
+									</td>
+									<td style="background-color:#EF424B; height: 40px; color: white; font-weight: bold; border-radius: 0px 5px 0px 0px ;">
+										CAMBIAR
+									</td>
+
+								</tr>
+								<tr>
+									<td colspan="2" style="height: 15px"></td>
+								</tr>
+
+								<tr style="border-collapse: collapse;border-left: 1px hidden; border-right: 1px hidden;">
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; font-weight: bold; text-align: center;">
+											MARTES <br>	25/01/2017
+									</td>
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; font-weight: bold; text-align: center;">
+											20:00
+									</td>
+									<td style="border:1px solid #A5A6A7;padding:3px 3px;">
+										<table style="width: 100%;">
+											<tr>
+												<td style="font-weight: bold; text-align: center;">
+													<img id="img-superior" style="width: 30px;" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt=""> Equipo 1
+												</td>
+												<td>
+													<div  style="font-weight: bold; color: black; font-size: 15px;">
+														0-1
+													</div>
+												</td>
+												<td style="font-weight: bold; text-align: center;">
+													 Equipo 4 <img id="img-superior" style="width: 30px;" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; width: 80px; font-weight: bold;text-align: center;">
+											<table style="width: 100%;">
+												<tr>
+													<td align="left" style="width: 50%;">
+														<b>Futbol City 1:</b>
+													</td>
+												</tr>
+												<tr>
+													<td style="width: 50%; color: gray;">
+														Calle Naranjos y Granados atras de GamaTv - C2
+													</td>
+												</tr>
+											</table>
+
+									</td>
+
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; font-weight: bold; text-align: center;">
+												<button class="btn btn-danger" data-toggle="modal" data-target=".bs-m2-modal-lg" id="torneoLugarDireccion" style="font-weight: bold;"> Cambiar Lugar</button>
+									</td>
+
+								</tr>
+								<tr style="border-collapse: collapse;border-left: 1px hidden; border-right: 1px hidden;">
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; font-weight: bold; text-align: center;">
+											MIERCOLES <br>	10/02/2017
+									</td>
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; font-weight: bold; text-align: center;">
+											19:00
+									</td>
+									<td style="border:1px solid #A5A6A7;padding:3px 3px;">
+										<table style="width: 100%;">
+											<tr>
+												<td style="font-weight: bold; text-align: center;">
+													<img id="img-superior" style="width: 30px;" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt=""> Equipo 5
+												</td>
+												<td>
+													<div  style="font-weight: bold; color: black; font-size: 15px;">
+														0-1
+													</div>
+												</td>
+												<td style="font-weight: bold; text-align: center;">
+													 Equipo 8 <img id="img-superior" style="width: 30px;" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; width: 80px; font-weight: bold;text-align: center;">
+											<table style="width: 100%;">
+												<tr>
+													<td align="left" style="width: 50%;">
+														<b>Futbol City 2:</b>
+													</td>
+												</tr>
+												<tr>
+													<td style="width: 50%; color: gray;">
+														Calle Naranjos y Granados atras de GamaTv - C2
+													</td>
+												</tr>
+											</table>
+
+									</td>
+
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; font-weight: bold; text-align: center;">
+												<button class="btn btn-danger" data-toggle="modal" data-target=".bs-m2-modal-lg" id="torneoLugarDireccion" style="font-weight: bold;"> Cambiar Lugar</button>
+									</td>
+
+								</tr>
+								<tr style="border-collapse: collapse;border-left: 1px hidden; border-right: 1px hidden;">
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; font-weight: bold; text-align: center;">
+											JUEVES <br>	12/02/2017
+									</td>
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; font-weight: bold; text-align: center;">
+											19:00
+									</td>
+									<td style="border:1px solid #A5A6A7;padding:3px 3px;">
+										<table style="width: 100%;">
+											<tr>
+												<td style="font-weight: bold; text-align: center;">
+													<img id="img-superior" style="width: 30px;" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt=""> Equipo 2
+												</td>
+												<td>
+													<div  style="font-weight: bold; color: black; font-size: 15px;">
+														0-1
+													</div>
+												</td>
+												<td style="font-weight: bold; text-align: center;">
+													 Equipo 3 <img id="img-superior" style="width: 30px;" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; width: 80px; font-weight: bold;text-align: center;">
+											<table style="width: 100%;">
+												<tr>
+													<td align="left" style="width: 50%;">
+														<b>Futbol City 3:</b>
+													</td>
+												</tr>
+												<tr>
+													<td style="width: 50%; color: gray;">
+														Calle Naranjos y Granados atras de GamaTv - C2
+													</td>
+												</tr>
+											</table>
+
+									</td>
+
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; font-weight: bold; text-align: center;">
+												<button class="btn btn-danger" data-toggle="modal" data-target=".bs-m2-modal-lg" id="torneoLugarDireccion" style="font-weight: bold;"> Cambiar Lugar</button>
+									</td>
+
+								</tr>
+								<tr style="border-collapse: collapse;border-left: 1px hidden; border-right: 1px hidden;">
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; font-weight: bold; text-align: center;">
+											SABADO <br>	15/02/2017
+									</td>
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; font-weight: bold; text-align: center;">
+											20:00
+									</td>
+									<td style="border:1px solid #A5A6A7;padding:3px 3px;">
+										<table style="width: 100%;">
+											<tr>
+												<td style="font-weight: bold; text-align: center;">
+													<img id="img-superior" style="width: 30px;" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt=""> Equipo 6
+												</td>
+												<td>
+													<div  style="font-weight: bold; color: black; font-size: 15px;">
+														0-1
+													</div>
+												</td>
+												<td style="font-weight: bold; text-align: center;">
+													 Equipo 7 <img id="img-superior" style="width: 30px;" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; width: 80px; font-weight: bold;text-align: center;">
+											<table style="width: 100%;">
+												<tr>
+													<td align="left" style="width: 50%;">
+														<b>Futbol City 1:</b>
+													</td>
+												</tr>
+												<tr>
+													<td style="width: 50%; color: gray;">
+														Calle Naranjos y Granados atras de GamaTv - C2
+													</td>
+												</tr>
+											</table>
+
+									</td>
+
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; font-weight: bold; text-align: center;">
+												<button class="btn btn-danger" data-toggle="modal" data-target=".bs-m2-modal-lg" id="torneoLugarDireccion" style="font-weight: bold;"> Cambiar Lugar</button>
+									</td>
+
+								</tr>
+								<tr style="border-collapse: collapse;border-left: 1px hidden; border-right: 1px hidden;">
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; font-weight: bold; text-align: center;">
+											DOMINGO <br>	16/02/2017
+									</td>
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; font-weight: bold; text-align: center;">
+											20:00
+									</td>
+									<td style="border:1px solid #A5A6A7;padding:3px 3px;">
+										<table style="width: 100%;">
+											<tr>
+												<td style="font-weight: bold; text-align: center;">
+													<img id="img-superior" style="width: 30px;" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt=""> Equipo 8
+												</td>
+												<td>
+													<div  style="font-weight: bold; color: black; font-size: 15px;">
+														0-1
+													</div>
+												</td>
+												<td style="font-weight: bold; text-align: center;">
+													 Equipo 1 <img id="img-superior" style="width: 30px;" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; width: 80px; font-weight: bold;text-align: center;">
+											<table style="width: 100%;">
+												<tr>
+													<td align="left" style="width: 50%;">
+														<b>Futbol City 3:</b>
+													</td>
+												</tr>
+												<tr>
+													<td style="width: 50%; color: gray;">
+														Calle Naranjos y Granados atras de GamaTv - C2
+													</td>
+												</tr>
+											</table>
+
+									</td>
+
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; font-weight: bold; text-align: center;">
+												<button class="btn btn-danger" data-toggle="modal" data-target=".bs-m2-modal-lg" id="torneoLugarDireccion" style="font-weight: bold;"> Cambiar Lugar</button>
+									</td>
+
+								</tr>
+								<tr style="border-collapse: collapse;border-left: 1px hidden; border-right: 1px hidden;">
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; font-weight: bold; text-align: center;">
+											LUNES <br>	17/02/2017
+									</td>
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; font-weight: bold; text-align: center;">
+											20:00
+									</td>
+									<td style="border:1px solid #A5A6A7;padding:3px 3px;">
+										<table style="width: 100%;">
+											<tr>
+												<td style="font-weight: bold; text-align: center;">
+													<img id="img-superior" style="width: 30px;" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt=""> Equipo 1
+												</td>
+												<td>
+													<div  style="font-weight: bold; color: black; font-size: 15px;">
+														0-1
+													</div>
+												</td>
+												<td style="font-weight: bold; text-align: center;">
+													 Equipo 4 <img id="img-superior" style="width: 30px;" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; width: 80px; font-weight: bold;text-align: center;">
+											<table style="width: 100%;">
+												<tr>
+													<td align="left" style="width: 50%;">
+														<b>Futbol City 2:</b>
+													</td>
+												</tr>
+												<tr>
+													<td style="width: 50%; color: gray;">
+														Calle Naranjos y Granados atras de GamaTv - C2
+													</td>
+												</tr>
+											</table>
+
+									</td>
+
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; font-weight: bold; text-align: center;">
+												<button class="btn btn-danger" data-toggle="modal" data-target=".bs-m2-modal-lg" id="torneoLugarDireccion" style="font-weight: bold;"> Cambiar Lugar</button>
+									</td>
+
+								</tr>
+								<tr style="border-collapse: collapse;border-left: 1px hidden; border-right: 1px hidden;">
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; font-weight: bold; text-align: center;">
+											MARTES <br>	18/02/2017
+									</td>
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; font-weight: bold; text-align: center;">
+											20:00
+									</td>
+									<td style="border:1px solid #A5A6A7;padding:3px 3px;">
+										<table style="width: 100%;">
+											<tr>
+												<td style="font-weight: bold; text-align: center;">
+													<img id="img-superior" style="width: 30px;" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt=""> Equipo 7
+												</td>
+												<td>
+													<div  style="font-weight: bold; color: black; font-size: 15px;">
+														0-1
+													</div>
+												</td>
+												<td style="font-weight: bold; text-align: center;">
+													 Equipo 2 <img id="img-superior" style="width: 30px;" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; width: 80px; font-weight: bold;text-align: center;">
+											<table style="width: 100%;">
+												<tr>
+													<td align="left" style="width: 50%;">
+														<b>Futbol City 1:</b>
+													</td>
+												</tr>
+												<tr>
+													<td style="width: 50%; color: gray;">
+														Calle Naranjos y Granados atras de GamaTv - C2
+													</td>
+												</tr>
+											</table>
+
+									</td>
+
+									<td style="border:1px solid #A5A6A7;padding:3px 3px; font-weight: bold; text-align: center;">
+												<button class="btn btn-danger" data-toggle="modal" data-target=".bs-m2-modal-lg" id="torneoLugarDireccion" style="font-weight: bold;"> Cambiar Lugar</button>
+									</td>
+
+								</tr>
+
+
+							</table>
+							<br><br>
+
+					</div>
+					<br>
+				</div>
+			</div>
+			<div class="col-md-1"><!--sinDefinir--></div>
+		</div>
+
+
+		<!--**********************VENTANA MODAL********************************-->
+		<div class="modal fade bs-m3-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="row">
+						<div class="col-md-12">
+							<img class="img-thumbnail" src="{{ asset('bundles/app/images/gallery/mapa.jpg') }}" alt="">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<a href="" class="btn btn-success btn-4" data-dismiss='modal'>Aceptar</a>
+						</div>
+					</div>
+					<table style="font-weight: normal" class="table table-condensed">
+						<tr>
+							<th colspan="3" style="background-color: gray;color:white;">
+								Lista de direcciones registradas:
+							</th>
+						</tr>
+						<tr>
+							<td><b>Direccion 1</b></td>
+							<td><b>Futbol City 1:</b> Calle Naranjos y Granados atrás de GamaTv</td>
+							<td><a href="" class="btn btn-danger btn-block">Eliminar dirección</a></td>
+						</tr>
+						<tr>
+							<td><b>Direccion 2</b></td>
+							<td><b>Futbol City 2:</b> Av. Eloy ALfaro 4355 y Gaspar de Villarroel</td>
+							<td><a href="" class="btn btn-danger btn-block">Eliminar dirección</a></td>
+						</tr>
+						<tr>
+							<td colspan="3">
+								<a href="" class="btn btn-info">Añadir nueva dirección</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade bs-m2-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+
+
+					<table style="font-weight: normal" class="table table-condensed">
+						<tr>
+							<th colspan="3" style="background-color: gray;color:white;">
+								Lista de direcciones registradas:
+							</th>
+						</tr>
+						<tr>
+							<td><b>Direccion 1</b></td>
+							<td><b>Futbol City 1:</b> Calle Naranjos y Granados atrás de GamaTv</td>
+							<td><a href="" class="btn btn-danger btn-block">Eliminar dirección</a></td>
+						</tr>
+						<tr>
+							<td><b>Direccion 2</b></td>
+							<td><b>Futbol City 2:</b> Av. Eloy ALfaro 4355 y Gaspar de Villarroel</td>
+							<td><a href="" class="btn btn-danger btn-block">Eliminar dirección</a></td>
+						</tr>
+						<tr>
+							<td colspan="3">
+								<a href="" class="btn btn-info">Añadir nueva dirección</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+                </div>
+            </div>
+            <img id="img-inferior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

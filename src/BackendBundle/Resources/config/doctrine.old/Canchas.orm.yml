@@ -1,0 +1,53 @@
+BackendBundle\Entity\Canchas:
+    type: entity
+    table: canchas
+    indexes:
+        fk_canchas_torneos1_idx:
+            columns:
+                - torneos_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombre:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        direccion:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        lugar:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        observacion:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+    oneToOne:
+        torneos:
+            targetEntity: Torneos
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                torneos_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

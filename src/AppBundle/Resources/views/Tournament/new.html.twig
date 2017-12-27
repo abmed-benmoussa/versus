@@ -1,0 +1,24 @@
+{% extends 'AppBundle::inicio.html.twig' %}
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="margenes margen-regular anchoLibre">
+            <img id="img-superior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/titleHead/creaTuTorneo.svg') }}" alt="">
+            <div class="miContenedor bg-black">
+                <div class="container">
+                    {{ form_start(form) }}
+                        {% include 'AppBundle:Tournament/parts:form.html.twig' %}<br>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+            <img id="img-inferior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block javascripts %}
+<script src="{{ asset('bundles/app/js/modules/googlemap-field-modal.js') }}" type="text/javascript"></script>
+<script src="{{ asset('bundles/app/js/modules/tournament.js') }}" type="text/javascript"></script>
+{% endblock %}

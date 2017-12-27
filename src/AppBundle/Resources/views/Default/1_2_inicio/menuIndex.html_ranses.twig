@@ -1,0 +1,35 @@
+{% extends 'AppBundle::inicio.html.twig' %}
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+	<div class="row">
+  		<div class="col-md-12 ">
+  			<img class="img-thumbnail margen-superior" src="{{ asset('bundles/app/images/titleHead/inicio.svg') }}" alt="">
+  			<div class="fondo-negro ">
+  				<br>
+  					<div class="row">
+						<div class="col-md-6 col-md-offset-1"">
+				  			<a href="{{path('crear_torneo')}}">
+				  				<img src="{{ asset('bundles/app/images/buttons/boton1.svg') }}">
+				  			</a>
+				  			<a href="{{path('mis_torneos')}}">
+				  				<img src="{{ asset('bundles/app/images/buttons/boton2.svg') }}">
+				  			</a>
+				  			<a href="{{path('conectar_cuentas')}}">
+				  				<img src="{{ asset('bundles/app/images/buttons/boton3.svg') }}">
+				  			</a>
+				  			<a href="">
+				  				<img src="{{ asset('bundles/app/images/buttons/boton4.svg') }}">
+				  			</a>
+				  		</div>
+
+				  		<img class="jugador1" src="{{ asset('bundles/app/images/gallery/jugador1.png') }}">
+					</div>
+				<br>
+			</div>
+			<img class="img-thumbnail" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+
+
+  		</div>
+  	</div>
+
+{% endblock %}

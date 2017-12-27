@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="app.avatar"
+            class="AppBundle\Library\Avatar\Avatar"
+            abstract="true">
+            <argument type="service" id="request_stack" />
+        </service>
+        <service id="app.avatar.tournament"
+            parent="app.avatar"
+            class="AppBundle\Library\Avatar\TournamentAvatar"
+        />
+        <service id="app.avatar.team"
+            parent="app.avatar"
+            class="AppBundle\Library\Avatar\TeamAvatar"
+        />
+        <service id="app.avatar.profile"
+            parent="app.avatar"
+            class="AppBundle\Library\Avatar\ProfileAvatar"
+        />
+    </services>
+</container>

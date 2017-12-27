@@ -1,0 +1,34 @@
+{% extends 'AppBundle::inicio.html.twig' %}
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+	<div class="row">
+  		<div class="col-md-12 ">
+  			<img class="img-thumbnail-none margen-superior" src="{{ asset('bundles/app/images/titleHead/misTorneos.svg') }}" alt="">
+  			<div class="fondo-blanco margen-misTorneos">
+  				<br>
+  					<div class="row">
+						<div class="col-md-4"">
+				  			<a href="">
+				  				<img class="img-thumbnail-none" src="{{ asset('bundles/app/images/buttons/torneo1.png') }}">
+				  			</a>
+				  		</div>
+				  		<div class="col-md-4"">
+				  			<a href="">
+				  				<img class="img-thumbnail-none" src="{{ asset('bundles/app/images/buttons/torneo2.png') }}">
+				  			</a>
+				  		</div>
+				  		<div class="col-md-4"">
+				  			<a href="">
+				  				<img class="img-thumbnail-none" src="{{ asset('bundles/app/images/buttons/torneo3.png') }}">
+				  			</a>
+				  		</div>
+					</div>
+				<br>
+			</div>
+			<img class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+
+
+  		</div>
+  	</div>
+
+{% endblock %}

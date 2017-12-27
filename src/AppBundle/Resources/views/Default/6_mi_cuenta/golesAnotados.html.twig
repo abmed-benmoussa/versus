@@ -1,0 +1,224 @@
+{% extends 'AppBundle::inicio.html.twig' %}
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+
+<div class="row">
+    <div class="col-md-12 ">
+        <div class="margenes margen-regular ">
+            <img id="img-superior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/titleHead/miCuenta.svg') }}" alt="">
+            <div class="miContenedor bg-white">
+                <div class="container">
+                    <br>
+  				<div class="row">
+					<div class="col-md-12">
+						<div class="partidos_postergados-title text-gray" style="font-size: 30px;">
+							<img style="width: 50px; height: 50px;"  class="img-thumbnail-none"  src="{{ asset('bundles/app/images/gallery/icons/golesAnotadosGris.svg') }}" alt="">  Goles Anotados
+						</div>
+
+					</div>
+
+				</div>
+				<div class="row">
+					<div class="con-md-12">
+						<div class="scroll">
+							<table id="partidos_postergados-table" class="table table-condensed">
+								<thead >
+									<tr class="fondo-gray" style="background-color: #3E4F57 !important;color:white">
+										<th >COMPETICIÓN</th>
+										<th class="text-center">GOLES EN JUEGO</th>
+										<th class="text-center">GOLES DE PENAL</th>
+									</tr>
+								</thead>
+								<tbody class="fondo-blanco">
+									<tr style="border-top:2px solid #465059;">
+										<td colspan="3">
+											<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+												<div class="panel panel-default">
+													<div class="panel-heading" style="border-bottom:1px solid #3E4F57;" role="tab" id="headingOne">
+														<h4 class="panel-title">
+															<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+																<div class="row">
+																	<div class="col-md-4" style="border-right:1px solid #3E4F57;color: #465059;">Torneo Empresarial 2017#1 <span class="caret" style="float:right;"></span></div>
+																	<div class="col-md-4 text-center color-gray" style="border-right:1px solid #3E4F57;color: #465059;"><b style="color: #465059; font-style:normal !important;font-weight:bold !important;">3</b></div>
+																	<div class="col-md-4 text-center color-gray" ><b style="color: #465059; font-style:normal !important;font-weight:bold !important">3</b></div>
+																</div>
+
+															</a>
+														</h4>
+													</div>
+													<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+														<div class="panel-body">
+															<table class="table table-bordered" style="color:#465059;">
+																<tr>
+																	<td style="width: 33.33333333%;padding-left: 2%;">
+																		<li style="list-style-type: disc;">Equipo 2 vs Equipo 4</li>
+																	</td>
+																	<td style="width: 33.33333333%;">
+																		<div class="text-center" style="font-weight">3</div>
+																	</td>
+																	<td style="width: 33.33333333%;">
+																		<div class="text-center" style="font-weight">5</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td style="width: 33.33333333%;padding-left: 2%;">
+																		<li style="list-style-type: disc;">Equipo 6 vs Equipo 1</li>
+																	</td>
+																	<td style="width: 33.33333333%;">
+																		<div class="text-center" style="font-weight">6</div>
+																	</td>
+																	<td style="width: 33.33333333%;">
+																		<div class="text-center" style="font-weight">1</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td style="width: 33.33333333%;padding-left: 2%;">
+																		<li style="list-style-type: disc;">Equipo 3 vs Equipo 5</li>
+																	</td>
+																	<td style="width: 33.33333333%;">
+																		<div class="text-center" style="font-weight">3</div>
+																	</td>
+																	<td style="width: 33.33333333%;">
+																		<div class="text-center" style="font-weight">5</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
+												<div class="panel panel-default">
+													<div class="panel-heading" style="border-bottom:1px solid #3E4F57;" role="tab" id="headingTwo">
+														<h4 class="panel-title">
+															<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+																<div class="row">
+																	<div class="col-md-4" style="border-right:1px solid #3E4F57;color: #465059;">Torneo división operativa <span class="caret" style="float:right;"></span></div>
+																	<div class="col-md-4 text-center color-gray" style="border-right:1px solid #3E4F57;color: #465059;"><b style="color: #465059; font-style:normal !important;font-weight:bold !important;">3</b></div>
+																	<div class="col-md-4 text-center color-gray" ><b style="color: #465059; font-style:normal !important;font-weight:bold !important">3</b></div>
+																</div>
+
+															</a>
+														</h4>
+													</div>
+													<div id="collapseTwo" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="headingTwo">
+														<div class="panel-body">
+															<table class="table table-bordered" style="color:#465059;">
+																<tr>
+																	<td style="width: 33.33333333%;padding-left: 2%;">
+																		<li style="list-style-type: disc;">Equipo 2 vs Equipo 4</li>
+																	</td>
+																	<td style="width: 33.33333333%;">
+																		<div class="text-center" style="font-weight">3</div>
+																	</td>
+																	<td style="width: 33.33333333%;">
+																		<div class="text-center" style="font-weight">5</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td style="width: 33.33333333%;padding-left: 2%;">
+																		<li style="list-style-type: disc;">Equipo 6 vs Equipo 1</li>
+																	</td>
+																	<td style="width: 33.33333333%;">
+																		<div class="text-center" style="font-weight">6</div>
+																	</td>
+																	<td style="width: 33.33333333%;">
+																		<div class="text-center" style="font-weight">1</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td style="width: 33.33333333%;padding-left: 2%;">
+																		<li style="list-style-type: disc;">Equipo 3 vs Equipo 5</li>
+																	</td>
+																	<td style="width: 33.33333333%;">
+																		<div class="text-center" style="font-weight">3</div>
+																	</td>
+																	<td style="width: 33.33333333%;">
+																		<div class="text-center" style="font-weight">5</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
+												<div class="panel panel-default">
+													<div class="panel-heading" style="border-bottom:1px solid #3E4F57;" role="tab" id="headingThree">
+														<h4 class="panel-title">
+															<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+																<div class="row">
+																	<div class="col-md-4" style="border-right:1px solid #3E4F57;color: #465059;">Torneo Área de producción <span class="caret" style="float:right;"></span></div>
+																	<div class="col-md-4 text-center color-gray" style="border-right:1px solid #3E4F57;color: #465059;"><b style="color: #465059; font-style:normal !important;font-weight:bold !important;">3</b></div>
+																	<div class="col-md-4 text-center color-gray" ><b style="color: #465059; font-style:normal !important;font-weight:bold !important">3</b></div>
+																</div>
+
+															</a>
+														</h4>
+													</div>
+													<div id="collapseThree" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="headingThree">
+														<div class="panel-body">
+															<table class="table table-bordered" style="color:#465059;">
+																<tr>
+																	<td style="width: 33.33333333%;padding-left: 2%;">
+																		<li style="list-style-type: disc;">Equipo 2 vs Equipo 4</li>
+																	</td>
+																	<td style="width: 33.33333333%;">
+																		<div class="text-center" style="font-weight">3</div>
+																	</td>
+																	<td style="width: 33.33333333%;">
+																		<div class="text-center" style="font-weight">5</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td style="width: 33.33333333%;padding-left: 2%;">
+																		<li style="list-style-type: disc;">Equipo 6 vs Equipo 1</li>
+																	</td>
+																	<td style="width: 33.33333333%;">
+																		<div class="text-center" style="font-weight">6</div>
+																	</td>
+																	<td style="width: 33.33333333%;">
+																		<div class="text-center" style="font-weight">1</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td style="width: 33.33333333%;padding-left: 2%;">
+																		<li style="list-style-type: disc;">Equipo 3 vs Equipo 5</li>
+																	</td>
+																	<td style="width: 33.33333333%;">
+																		<div class="text-center" style="font-weight">3</div>
+																	</td>
+																	<td style="width: 33.33333333%;">
+																		<div class="text-center" style="font-weight">5</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
+
+											</div>
+										</td>
+									</tr>
+
+
+								</tbody>
+								<tfoot style="background-color: #3E4F57 !important; color:white;font-weight:bold;">
+									<tr>
+										<td colspan="3">
+
+											<div class="col-md-4" style="border-right:1px solid white; color: white;">TOTAL GOLES ANOTADOS</div>
+											<div  style="border-right:1px solid white; color: white;" class="col-md-4 text-center color-gray" ><b style="color: white; font-style:normal !important;font-weight:1000">11</b></div>
+											<div class="col-md-4 text-center color-gray" ><b style="color: white; font-style:normal !important;font-weight:1000">11</b></div>
+
+										</td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div>
+				</div>
+                </div>
+            </div>
+            <img id="img-inferior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'AppBundle::layout.html.twig' %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="margenes">
+            <img id="img-superior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/titleHead/iniciarSesion.svg') }}" alt="">
+            <div class="miContenedor margen-login bg-black">
+                <div class="container">
+                    <div class="text-center">
+                        <h3>Acceso a la plataforma</h3>
+                        <br><br>
+                        <form action="{{ path('fos_user_resetting_send_email') }}" method="post" class="form-horizontal">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-envelope-o"></i></div>
+                        <input class="form-control input-lg" id="username" name="username" placeholder="Escriba su correo electrónico" required="required" type="text" >
+                    </div>
+
+                    <br>
+                    <div class="text-center text-mute">
+                        <h4>Recibirá un mail <br> con los últimos datos registrados</h4>
+                    </div>
+                    <br>
+                    <br>
+                    <button type="submit" class="btn btn-danger btn-lg btn-block" id="_submit" name="_submit">Recuperar Contraseña</button>
+                    <br>
+
+                </div>
+            </div>
+            </form>
+            <img id="img-inferior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+            <img id="balon" class="balon img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/balon.png') }}" alt="">
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <img id="img-superior" class="img-thumbnail-none publicidad1" src="{{ asset('bundles/app/images/publicidad/publicidad1.png') }}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

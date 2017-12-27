@@ -1,0 +1,11 @@
+editar-equipos:
+    path: /editar-equipos/{id}
+    defaults: { _controller: AppBundle:Equipos:editarequipos }    
+
+informacion-equipos:
+    path: /informacion-equipos/{id}
+    defaults: { _controller: AppBundle:Equipos:crearequipos }
+
+ver-equipos:
+    path: /ver-equipos/{id}
+    defaults: { _controller: AppBundle:Equipos:verequipos }    

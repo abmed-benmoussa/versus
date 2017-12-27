@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="app.bulkload"
+            class="AppBundle\Library\BulkLoad\BulkLoad"
+            abstract="true">
+            <argument type="service" id="request_stack" />
+            <argument type="service" id="app.manager.user_manager" />
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument type="service" id="app.service.excel_reader" />
+            <argument type="service" id="monolog.logger.bulkload" />
+            <argument></argument>
+        </service>
+        <service id="app.bulkload.player"
+            parent="app.bulkload"
+            class="AppBundle\Library\BulkLoad\PlayerBulkLoad">
+            <argument index="5">app_equipos</argument>
+        </service>
+    </services>
+</container>

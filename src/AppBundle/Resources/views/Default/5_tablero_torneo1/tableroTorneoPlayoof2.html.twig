@@ -1,0 +1,383 @@
+{% extends 'AppBundle::inicio.html.twig' %}
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="margenes margen-regular anchoLibre">
+            <img id="img-superior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/titleHead/tableroTorneo.svg') }}" alt="">
+            <div class="miContenedor bg-white">
+                <div class="container">
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h4 class="text-gray" style="font-weight: bold;">
+                                <img style="width: 50px; height: 50px;" src="{{ asset('bundles/app/images/gallery/icons/fixture_gris.svg') }}" alt="">
+                                FIXTURE COMPLETO
+                            </h4>
+                        </div>
+
+                        <div class="col-md-2"><!--
+                            <a id="" class="btn btn-success btn-block text-white" href="{{path('info_equipos')}}">
+                                <div class="row" >
+                                    <div class="col-md-2 div-nowrap">
+
+                                    </div>
+                                    <div class="col-md-8 div-nowrap">
+                                         <b>TORNEO COMBINADO</b>
+                                    </div>
+                                </div>
+                            </a>-->
+
+                        </div>
+
+                        <div class="col-md-2"><!--
+                            <a hid="torneoGrupos" class="btn  bg-gray-light btn-block"  style="height: 63px;vertical-align:middle;line-height:50px;text-align: :center"> <b>GRUPOS</b></a>-->
+                        </div>
+                        <div class="col-md-2">
+                            <a hid="torneoGrupos" class="btn bg-gray-light btn-block" style="height: 63px;vertical-align:middle;line-height:50px;text-align: :center"><b><img style="width: 50px; height: 50px;" src="{{ asset('bundles/app/images/gallery/icons/playoff.svg') }}" alt="">PLAYOFF</b></a>
+                        </div>
+                        <div class="col-md-2">
+                            <a hid="torneoGrupos" class="btn btn-danger btn-block" style="height: 63px;vertical-align:middle;line-height:50px;text-align: :center"><b>FECHAS</b></a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="panel-ttpf1 panel-default">
+                                        <div class="panel-heading  bg-danger text-white text-center">
+                                            <b> INFORMACIÓN</b>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="panel-ttpf1 panel-default">
+                                                <div class="panel-heading bg-gray-light">
+                                                    <h3 class="panel-title text-center text-gray2" style="font-weight:bold;font-size: 12px;">NÚMERO DE EQUIPOS</h3>
+                                                </div>
+                                                <div class="panel-body text-gray bg-white">
+                                                    <b>8 Equipos</b> <span><i style="float: right" class="fa fa-pencil text-gray"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="panel-ttpf1 panel-default">
+                                                <div class="panel-heading bg-gray-light">
+                                                    <h3 class="panel-title text-center text-gray2" style="font-weight:bold;font-size: 12px;">NÚMERO DE GRUPOS</h3>
+                                                </div>
+                                                <div class="panel-body text-gray bg-white">
+                                                    <b>2 Grupos</b> <span><i style="float: right" class="fa fa-pencil text-gray"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="panel-ttpf1 panel-default">
+                                                <div class="panel-heading bg-gray-light">
+                                                    <h3 class="panel-title text-center text-gray2" style="font-weight:bold;font-size: 12px;">EQUIPOS POR GRUPO</h3>
+                                                </div>
+                                                <div class="panel-body text-gray bg-white">
+                                                    <b>4 Equipos por Grupo</b> <span><i style="float: right" class="fa fa-pencil text-gray"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="panel-ttpf1 panel-default">
+                                                <div class="panel-heading bg-gray-light">
+                                                    <h3 class="panel-title text-center text-gray2" style="font-weight:bold;font-size: 12px;">PARTIDOS IDA Y VUELTA</h3>
+                                                </div>
+                                                <div class="panel-body text-gray bg-white">
+                                                    <b>Partidos de Ida</b> <span><i style="float: right" class="fa fa-pencil text-gray"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="panel-ttpf1 panel-default">
+                                        <div class="panel-heading  bg-danger text-white">
+                                            <b> MODALIDAD DE TORNEO POR PLAYOFF</b> <span style="float: right;font-weight: bold;">LLAVES</span>
+                                        </div>
+                                        <div class="panel-body bg-white" style="overflow: scroll;width: 100% !important">
+                                            <div style="width: 1000px !important">
+                                                <div class="row">
+                                                	<div class="col-md-6">
+                                                		<div class="panel-ttpf1 panel-default">
+                                                			<div style="padding: 1%;" class="panel-heading bg-danger text-center text-white">
+                                                				<h4>Cuartos de final</h4>
+                                                			</div>
+                                                			<div class="panel-body text-black">
+
+                                                				<div class="row">
+                                                					<div class="col-md-6">
+                                                						<div class="panel-heading bg-gray-light" style="height: 15px; font-size: 10px;padding: 0px; font-weight: bold; line-height: 15px; padding-left: 10px;">
+                                                							3 Nov 2016 <span style="float: right;padding-right: 10px;">Llave 1</span>
+                                                						</div>
+                                                						<div class="panel panel-default">
+                                                							<div class="panel-body"  style="padding:3px;">
+                                                								<div class="row" style="padding-bottom: 1%">
+                                                									<div class="col-md-9">
+                                                										<img style="width: 30px; height: 30px;" id="img-inferior" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+                                                										<b>Equipo 1	</b>
+                                                									</div>
+                                                									<div class="col-md-3 text-center" style="line-height: 30px;">
+                                                										<b>0</b>
+                                                									</div>
+                                                								</div>
+                                                								<div class="row">
+                                                									<div class="col-md-9">
+                                                										<img style="width: 30px; height: 30px;" id="img-inferior" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+                                                										<b>Equipo 1	</b>
+                                                									</div>
+                                                									<div class="col-md-3 text-center" style="line-height: 30px;">
+                                                										<b>0</b>
+                                                									</div>
+                                                								</div>
+                                                							</div>
+                                                							<div class="panel-footer bg-gray-light" style="height: 15px; font-size: 10px;padding: 0px; font-weight: bold; line-height: 15px; padding-left: 10px;">
+	                                                							19:00 - Futbol City - Cancha 2
+	                                                						</div>
+                                                						</div>
+                                                					</div>
+                                                					<div class="col-md-6">
+                                                						<div class="panel-heading bg-gray-light" style="height: 15px; font-size: 10px;padding: 0px; font-weight: bold; line-height: 15px; padding-left: 10px;">
+                                                							3 Nov 2016 <span style="float: right;padding-right: 10px;">Llave 1</span>
+                                                						</div>
+                                                						<div class="panel panel-default">
+                                                							<div class="panel-body"  style="padding:3px;">
+                                                								<div class="row" style="padding-bottom: 1%">
+                                                									<div class="col-md-9">
+                                                										<img style="width: 30px; height: 30px;" id="img-inferior" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+                                                										<b>Equipo 1	</b>
+                                                									</div>
+                                                									<div class="col-md-3 text-center" style="line-height: 30px;">
+                                                										<b>0</b>
+                                                									</div>
+                                                								</div>
+                                                								<div class="row">
+                                                									<div class="col-md-9">
+                                                										<img style="width: 30px; height: 30px;" id="img-inferior" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+                                                										<b>Equipo 1	</b>
+                                                									</div>
+                                                									<div class="col-md-3 text-center" style="line-height: 30px;">
+                                                										<b>0</b>
+                                                									</div>
+                                                								</div>
+                                                							</div>
+                                                							<div class="panel-footer bg-gray-light" style="height: 15px; font-size: 10px;padding: 0px; font-weight: bold; line-height: 15px; padding-left: 10px;">
+	                                                							19:00 - Futbol City - Cancha 2
+	                                                						</div>
+                                                						</div>
+                                                					</div>
+                                                				</div>
+                                                				<div class="row">
+                                                					<div class="col-md-6">
+                                                						<div class="panel-heading bg-gray-light" style="height: 15px; font-size: 10px;padding: 0px; font-weight: bold; line-height: 15px; padding-left: 10px;">
+                                                							3 Nov 2016 <span style="float: right;padding-right: 10px;">Llave 1</span>
+                                                						</div>
+                                                						<div class="panel panel-default">
+                                                							<div class="panel-body"  style="padding:3px;">
+                                                								<div class="row" style="padding-bottom: 1%">
+                                                									<div class="col-md-9">
+                                                										<img style="width: 30px; height: 30px;" id="img-inferior" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+                                                										<b>Equipo 1	</b>
+                                                									</div>
+                                                									<div class="col-md-3 text-center" style="line-height: 30px;">
+                                                										<b>0</b>
+                                                									</div>
+                                                								</div>
+                                                								<div class="row">
+                                                									<div class="col-md-9">
+                                                										<img style="width: 30px; height: 30px;" id="img-inferior" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+                                                										<b>Equipo 1	</b>
+                                                									</div>
+                                                									<div class="col-md-3 text-center" style="line-height: 30px;">
+                                                										<b>0</b>
+                                                									</div>
+                                                								</div>
+                                                							</div>
+                                                							<div class="panel-footer bg-gray-light" style="height: 15px; font-size: 10px;padding: 0px; font-weight: bold; line-height: 15px; padding-left: 10px;">
+	                                                							19:00 - Futbol City - Cancha 2
+	                                                						</div>
+                                                						</div>
+                                                					</div>
+                                                					<div class="col-md-6">
+                                                						<div class="panel-heading bg-gray-light" style="height: 15px; font-size: 10px;padding: 0px; font-weight: bold; line-height: 15px; padding-left: 10px;">
+                                                							3 Nov 2016 <span style="float: right;padding-right: 10px;">Llave 1</span>
+                                                						</div>
+                                                						<div class="panel panel-default">
+                                                							<div class="panel-body"  style="padding:3px;">
+                                                								<div class="row" style="padding-bottom: 1%">
+                                                									<div class="col-md-9">
+                                                										<img style="width: 30px; height: 30px;" id="img-inferior" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+                                                										<b>Equipo 1	</b>
+                                                									</div>
+                                                									<div class="col-md-3 text-center" style="line-height: 30px;">
+                                                										<b>0</b>
+                                                									</div>
+                                                								</div>
+                                                								<div class="row">
+                                                									<div class="col-md-9">
+                                                										<img style="width: 30px; height: 30px;" id="img-inferior" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+                                                										<b>Equipo 1	</b>
+                                                									</div>
+                                                									<div class="col-md-3 text-center" style="line-height: 30px;">
+                                                										<b>0</b>
+                                                									</div>
+                                                								</div>
+                                                							</div>
+                                                							<div class="panel-footer bg-gray-light" style="height: 15px; font-size: 10px;padding: 0px; font-weight: bold; line-height: 15px; padding-left: 10px;">
+	                                                							19:00 - Futbol City - Cancha 2
+	                                                						</div>
+                                                						</div>
+                                                					</div>
+                                                				</div>
+                                                			</div>
+                                                		</div>
+                                                	</div>
+                                                	<div class="col-md-6">
+                                                		<div class="panel-ttpf1 panel-default">
+                                                			<div style="padding: 1%;" class="panel-heading bg-danger text-center text-white">
+                                                				<h4>Semifinal</h4>
+                                                			</div>
+                                                			<div class="panel-body text-black">
+
+                                                				<div class="row">
+                                                					<div class="col-md-6">
+                                                						<div class="panel-heading bg-gray-light" style="height: 15px; font-size: 10px;padding: 0px; font-weight: bold; line-height: 15px; padding-left: 10px;">
+                                                							3 Nov 2016 <span style="float: right;padding-right: 10px;">Llave 1</span>
+                                                						</div>
+                                                						<div class="panel panel-default">
+                                                							<div class="panel-body"  style="padding:3px;">
+                                                								<div class="row" style="padding-bottom: 1%">
+                                                									<div class="col-md-9">
+                                                										<img style="width: 30px; height: 30px;" id="img-inferior" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+                                                										<b>Equipo 1	</b>
+                                                									</div>
+                                                									<div class="col-md-3 text-center" style="line-height: 30px;">
+                                                										<b>0</b>
+                                                									</div>
+                                                								</div>
+                                                								<div class="row">
+                                                									<div class="col-md-9">
+                                                										<img style="width: 30px; height: 30px;" id="img-inferior" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+                                                										<b>Equipo 1	</b>
+                                                									</div>
+                                                									<div class="col-md-3 text-center" style="line-height: 30px;">
+                                                										<b>0</b>
+                                                									</div>
+                                                								</div>
+                                                							</div>
+                                                							<div class="panel-footer bg-gray-light" style="height: 15px; font-size: 10px;padding: 0px; font-weight: bold; line-height: 15px; padding-left: 10px;">
+	                                                							19:00 - Futbol City - Cancha 2
+	                                                						</div>
+                                                						</div>
+                                                					</div>
+                                                					<div class="col-md-6">
+                                                						<div class="panel-heading bg-gray-light" style="height: 15px; font-size: 10px;padding: 0px; font-weight: bold; line-height: 15px; padding-left: 10px;">
+                                                							3 Nov 2016 <span style="float: right;padding-right: 10px;">Llave 1</span>
+                                                						</div>
+                                                						<div class="panel panel-default">
+                                                							<div class="panel-body"  style="padding:3px;">
+                                                								<div class="row" style="padding-bottom: 1%">
+                                                									<div class="col-md-9">
+                                                										<img style="width: 30px; height: 30px;" id="img-inferior" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+                                                										<b>Equipo 1	</b>
+                                                									</div>
+                                                									<div class="col-md-3 text-center" style="line-height: 30px;">
+                                                										<b>0</b>
+                                                									</div>
+                                                								</div>
+                                                								<div class="row">
+                                                									<div class="col-md-9">
+                                                										<img style="width: 30px; height: 30px;" id="img-inferior" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+                                                										<b>Equipo 1	</b>
+                                                									</div>
+                                                									<div class="col-md-3 text-center" style="line-height: 30px;">
+                                                										<b>0</b>
+                                                									</div>
+                                                								</div>
+                                                							</div>
+                                                							<div class="panel-footer bg-gray-light" style="height: 15px; font-size: 10px;padding: 0px; font-weight: bold; line-height: 15px; padding-left: 10px;">
+	                                                							19:00 - Futbol City - Cancha 2
+	                                                						</div>
+                                                						</div>
+                                                					</div>
+                                                				</div>
+                                                				<div class="row">
+                                                					<div class="col-md-6">
+                                                						<div class="panel-heading bg-gray-light" style="height: 15px; font-size: 10px;padding: 0px; font-weight: bold; line-height: 15px; padding-left: 10px;">
+                                                							3 Nov 2016 <span style="float: right;padding-right: 10px;">Llave 1</span>
+                                                						</div>
+                                                						<div class="panel panel-default">
+                                                							<div class="panel-body"  style="padding:3px;">
+                                                								<div class="row" style="padding-bottom: 1%">
+                                                									<div class="col-md-9">
+                                                										<img style="width: 30px; height: 30px;" id="img-inferior" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+                                                										<b>Equipo 1	</b>
+                                                									</div>
+                                                									<div class="col-md-3 text-center" style="line-height: 30px;">
+                                                										<b>0</b>
+                                                									</div>
+                                                								</div>
+                                                								<div class="row">
+                                                									<div class="col-md-9">
+                                                										<img style="width: 30px; height: 30px;" id="img-inferior" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+                                                										<b>Equipo 1	</b>
+                                                									</div>
+                                                									<div class="col-md-3 text-center" style="line-height: 30px;">
+                                                										<b>0</b>
+                                                									</div>
+                                                								</div>
+                                                							</div>
+                                                							<div class="panel-footer bg-gray-light" style="height: 15px; font-size: 10px;padding: 0px; font-weight: bold; line-height: 15px; padding-left: 10px;">
+	                                                							19:00 - Futbol City - Cancha 2
+	                                                						</div>
+                                                						</div>
+                                                					</div>
+                                                					<div class="col-md-6">
+                                                						<div class="panel-heading bg-gray-light" style="height: 15px; font-size: 10px;padding: 0px; font-weight: bold; line-height: 15px; padding-left: 10px;">
+                                                							3 Nov 2016 <span style="float: right;padding-right: 10px;">Llave 1</span>
+                                                						</div>
+                                                						<div class="panel panel-default">
+                                                							<div class="panel-body"  style="padding:3px;">
+                                                								<div class="row" style="padding-bottom: 1%">
+                                                									<div class="col-md-9">
+                                                										<img style="width: 30px; height: 30px;" id="img-inferior" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+                                                										<b>Equipo 1	</b>
+                                                									</div>
+                                                									<div class="col-md-3 text-center" style="line-height: 30px;">
+                                                										<b>0</b>
+                                                									</div>
+                                                								</div>
+                                                								<div class="row">
+                                                									<div class="col-md-9">
+                                                										<img style="width: 30px; height: 30px;" id="img-inferior" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+                                                										<b>Equipo 1	</b>
+                                                									</div>
+                                                									<div class="col-md-3 text-center" style="line-height: 30px;">
+                                                										<b>0</b>
+                                                									</div>
+                                                								</div>
+                                                							</div>
+                                                							<div class="panel-footer bg-gray-light" style="height: 15px; font-size: 10px;padding: 0px; font-weight: bold; line-height: 15px; padding-left: 10px;">
+	                                                							19:00 - Futbol City - Cancha 2
+	                                                						</div>
+                                                						</div>
+                                                					</div>
+                                                				</div>
+                                                			</div>
+                                                		</div>
+                                                	</div>
+                                                </div>
+                                            </div>
+                                            <br>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <img id="img-inferior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

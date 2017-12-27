@@ -1,0 +1,47 @@
+BackendBundle\Entity\Arbitros:
+    type: entity
+    table: arbitros
+    indexes:
+        fk_arbitros_partidos1_idx:
+            columns:
+                - partidos_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombre:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        apellido:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        estado:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+    oneToOne:
+        partidos:
+            targetEntity: Partidos
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                partidos_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

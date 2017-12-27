@@ -1,0 +1,384 @@
+app_homepage:
+    path: /
+    defaults: { _controller: AppBundle:Default:home }
+
+# app_tournament:
+#     resource: "@AppBundle/Resources/config/routing/torneo.yml"
+#     prefix: /torneos
+
+# app_equipo:
+#     resource: "@AppBundle/Resources/config/routing/equipo.yml"
+#     prefix: /
+
+app_jugadores:
+    resource: "@AppBundle/Resources/config/routing/jugadores.yml"
+    prefix: /
+
+
+diseno_homepage:
+    path:     /indexp
+    defaults: { _controller: AppBundle:Default:index }
+##1_2_inicio
+
+olvido_contrasena:
+    path:     /olvido_contrasena
+    defaults: { _controller: AppBundle:Default:olvidoContrasena }
+
+inicio:
+    path:     /inicio
+    defaults: { _controller: AppBundle:Default:menuIndex }
+conectar_cuentas:
+    path:     /conectar_cuentas
+    defaults: { _controller: AppBundle:Default:conectarCuentas }
+conexion_cuentas:
+    path:     /conexion_cuentas
+    defaults: { _controller: AppBundle:Default:conexionCuentas }
+
+conectar_facebook:
+    path:     /conectar_facebook
+    defaults: { _controller: AppBundle:Default:conectarFacebook }
+
+conectar_twitter:
+    path:     /conectar_twitter
+    defaults: { _controller: AppBundle:Default:conectarTwitter }
+
+conectar_instagram:
+    path:     /conectar_instagram
+    defaults: { _controller: AppBundle:Default:conectarInstagram }
+
+select_mail:
+    path:     /select_mail
+    defaults: { _controller: AppBundle:Default:selectMail }
+
+conectar_google:
+    path:     /conectar_google
+    defaults: { _controller: AppBundle:Default:conectarGoogle }
+
+conectar_outlook:
+    path:     /conectar_outlook
+    defaults: { _controller: AppBundle:Default:conectarOutlook }
+
+conectar_yahoo:
+    path:     /conectar_yahoo
+    defaults: { _controller: AppBundle:Default:conectarYahoo }
+
+success_facebook:
+    path:     /success_facebook
+    defaults: { _controller: AppBundle:Default:successFacebook }
+
+danger_facebook:
+    path:     /danger_facebook
+    defaults: { _controller: AppBundle:Default:dangerFacebook }
+
+success_twitter:
+    path:     /success_twitter
+    defaults: { _controller: AppBundle:Default:successTwitter }
+
+danger_twitter:
+    path:     /danger_twitter
+    defaults: { _controller: AppBundle:Default:dangerTwitter }
+
+success_instagram:
+    path:     /success_instagram
+    defaults: { _controller: AppBundle:Default:successInstagram }
+
+danger_instagram:
+    path:     /danger_instagram
+    defaults: { _controller: AppBundle:Default:dangerInstagram }
+
+success_google:
+    path:     /success_google
+    defaults: { _controller: AppBundle:Default:successGoogle }
+
+danger_google:
+    path:     /danger_google
+    defaults: { _controller: AppBundle:Default:dangerGoogle }
+
+success_outlook:
+    path:     /success_outlook
+    defaults: { _controller: AppBundle:Default:successOutlook }
+
+danger_outlook:
+    path:     /danger_outlook
+    defaults: { _controller: AppBundle:Default:dangerOutlook }
+
+success_yahoo:
+    path:     /success_yahoo
+    defaults: { _controller: AppBundle:Default:successYahoo }
+
+danger_yahoo:
+    path:     /danger_yahoo
+    defaults: { _controller: AppBundle:Default:dangerYahoo }
+
+mis_torneos:
+    path:     /mis_torneos
+    defaults: { _controller: AppBundle:Default:misTorneos }
+
+##3_crear torneo
+crear_torneo:
+    path:     /crear_torneo
+    defaults: { _controller: AppBundle:Default:crearTorneo }
+
+info_equipos:
+    path:     /info_equipos
+    defaults: { _controller: AppBundle:Default:infoEquipos }
+
+carga_equipos:
+    path:     /carga_equipos
+    defaults: { _controller: AppBundle:Default:cargaEquipos }
+
+datos_jugador:
+    path:     /datos_jugador
+    defaults: { _controller: AppBundle:Default:datosJugador }
+
+##4_previsualizaTorneo
+inicio_ficha:
+    path:     /inicio_ficha
+    defaults: { _controller: AppBundle:Default:indexFichaTorneo }
+
+ficha_fechas:
+    path:     /ficha_fechas
+    defaults: { _controller: AppBundle:Default:fichaPorFechas }
+
+ficha_grupos:
+    path:     /ficha_grupos
+    defaults: { _controller: AppBundle:Default:fichaPorGrupos }
+
+ficha_fixture:
+    path:     /ficha_fixture
+    defaults: { _controller: AppBundle:Default:fichaPorFixture }
+
+ficha_fechas_2:
+    path:     /ficha_fechas_2
+    defaults: { _controller: AppBundle:Default:fichaPorFechas2 }
+
+ficha_grupos_2:
+    path:     /ficha_grupos_2
+    defaults: { _controller: AppBundle:Default:fichaPorGrupos2 }
+
+ficha_fixture_2:
+    path:     /ficha_fixture_2
+    defaults: { _controller: AppBundle:Default:fichaPorFixture2 }
+
+ficha_fixture_3:
+    path:     /ficha_fixture_3
+    defaults: { _controller: AppBundle:Default:fichaPorFixture3 }
+
+##5_tablero_torneo2
+tablero_torneo2:
+    path:     /tablero_torneo2
+    defaults: { _controller: AppBundle:Default:tableroTorneo2 }
+
+compartir_posiciones:
+    path:     /compartir_posiciones
+    defaults: { _controller: AppBundle:Default:compartirPosiciones }
+
+compartir_goleadores:
+    path:     /compartir_goleadores
+    defaults: { _controller: AppBundle:Default:compartirGoleadores }
+
+compartir_expul_amonestacines:
+    path:     /compartir_expul_amonestacines
+    defaults: { _controller: AppBundle:Default:compartirExpulAmonestacines }
+
+compartir_asistencias:
+    path:     /compartir_asistencias
+    defaults: { _controller: AppBundle:Default:compartirAsistencias }
+
+compartir_tablas:
+    path:     /compartir_tablas
+    defaults: { _controller: AppBundle:Default:compartirTablas }
+
+compartir_facebook:
+    path:     /compartir_facebook
+    defaults: { _controller: AppBundle:Default:compartirFacebook }
+
+compartir_twitter:
+    path:     /compartir_twitter
+    defaults: { _controller: AppBundle:Default:compartirTwitter }
+
+compartir_instagram:
+    path:     /compartir_instagram
+    defaults: { _controller: AppBundle:Default:compartirInstagram }
+
+compartir_mail:
+    path:     /compartir_mail
+    defaults: { _controller: AppBundle:Default:compartirMail }
+
+compartir_estadisticas:
+    path:     /compartir_estadisticas
+    defaults: { _controller: AppBundle:Default:compartirEstadisticas }
+
+partidos_postergados:
+    path:     /partidos_postergados
+    defaults: { _controller: AppBundle:Default:partidosPostergados }
+
+##5_tablero_torneo1
+tablero_torneo_3:
+    path:     /tablero_torneo_3
+    defaults: { _controller: AppBundle:Default:tableroTorneo3 }
+
+tabla_posiciones:
+    path:     /tabla_posiciones
+    defaults: { _controller: AppBundle:Default:tablaPosiciones }
+
+tablero_torneo_grupos:
+    path:     /tablero_torneo_grupos
+    defaults: { _controller: AppBundle:Default:tableroTorneoGrupos }
+
+tablero_torneo_lista:
+    path:     /tablero_torneo_lista
+    defaults: { _controller: AppBundle:Default:tableroTorneoLista }
+
+tablero_torneo_fechas:
+    path:     /tablero_torneo_fechas
+    defaults: { _controller: AppBundle:Default:tableroTorneoFechas }
+
+tablero_torneo_playoof1: ##mapa torneo
+    path:     /tablero_torneo_playoof1
+    defaults: { _controller: AppBundle:Default:tableroTorneoPlayoof1 }
+
+tablero_torneo_playoof2: ##mapa torneo 2
+    path:     /tablero_torneo_playoof2
+    defaults: { _controller: AppBundle:Default:tableroTorneoPlayoof2 }
+
+tablero_torneo_playoof_f:
+    path:     /tablero_torneo_playoof_f
+    defaults: { _controller: AppBundle:Default:tableroTorneoPlayoofF }
+
+tablero_torneo_combinado:
+    path:     /tablero_torneo_combinado
+    defaults: { _controller: AppBundle:Default:tableroTorneoCombinado }
+
+resultado_partido:
+    path:     /resultado_partido
+    defaults: { _controller: AppBundle:Default:resultadoPartido }
+##el resto
+
+
+
+
+tablero_torneo_grupos_2: ##COMBINADO
+    path:     /tablero_torneo_grupos_2
+    defaults: { _controller: AppBundle:Default:tableroTorneoGrupos2 }
+
+tablero_torneo_lista_2:
+    path:     /tablero_torneo_lista_2
+    defaults: { _controller: AppBundle:Default:tableroTorneoLista2 }
+
+tablero_torneo_fechas_2:
+    path:     /tablero_torneo_fechas_2
+    defaults: { _controller: AppBundle:Default:tableroTorneoFechas2 }
+
+tablero_torneo_playoof_3:
+    path:     /tablero_torneo_playoof_3
+    defaults: { _controller: AppBundle:Default:tableroTorneoPlayoof3 }
+
+tablero_torneo_playoof_4:
+    path:     /tablero_torneo_playoof_4
+    defaults: { _controller: AppBundle:Default:tableroTorneoPlayoof4 }
+
+tablero_torneo_playoof_f2:
+    path:     /tablero_torneo_playoof_f2
+    defaults: { _controller: AppBundle:Default:tableroTorneoPlayoofF2 }
+
+detalle_partido:
+    path:     /detalle_partido
+    defaults: { _controller: AppBundle:Default:detallePartido }
+
+detalle_partido_2:
+    path:     /detalle_partido_2
+    defaults: { _controller: AppBundle:Default:detallePartido2 }
+
+estadisticas_jugador:
+    path:     /estadisticas_jugador
+    defaults: { _controller: AppBundle:Default:estadisticasJugador }
+
+detalle_partido_3:
+    path:     /detalle_partido_3
+    defaults: { _controller: AppBundle:Default:detallePartido3 }
+
+
+compartir_partido:
+    path:     /compartir_partido
+    defaults: { _controller: AppBundle:Default:compartirPartido }
+
+select_compartir:
+    path:     /select_compartir
+    defaults: { _controller: AppBundle:Default:selectCompartir }
+
+compartir_facebook_2:
+    path:     /compartir_facebook_2
+    defaults: { _controller: AppBundle:Default:compartirFacebook2 }
+
+fecha_horarios:
+    path:     /fecha_horarios
+    defaults: { _controller: AppBundle:Default:fechaHorarios }
+
+fecha_horarios_2:
+    path:     /fecha_horarios_2
+    defaults: { _controller: AppBundle:Default:fechaHorarios2 }
+
+direccion_partidos:
+    path:     /direccion_partidos
+    defaults: { _controller: AppBundle:Default:direccionPartidos }
+
+tabla_goleadores:
+    path:     /tabla_goleadores
+    defaults: { _controller: AppBundle:Default:tablaGoleadores }
+
+tabla_asistencias:
+    path:     /tabla_asistencias
+    defaults: { _controller: AppBundle:Default:tablaAsistencias }
+
+tabla_expulsiones:
+    path:     /tabla_expulsiones
+    defaults: { _controller: AppBundle:Default:tablaExpulsiones }
+
+proximas_fechas:
+    path:     /proximas_fechas
+    defaults: { _controller: AppBundle:Default:proximasFechas1 }
+
+proximas_fechas_2:
+    path:     /proximas_fechas_2
+    defaults: { _controller: AppBundle:Default:proximasFechas2 }
+
+novedades_torneo:
+    path:     /novedades_torneo
+    defaults: { _controller: AppBundle:Default:novedadesTorneo }
+##6 mi_cuenta
+mi_cuenta:
+    path:     /mi_cuenta
+    defaults: { _controller: AppBundle:Default:miCuenta }
+
+tablero_torneo:
+    path:     /tablero_torneo
+    defaults: { _controller: AppBundle:Default:tableroTorneo }
+
+partidos_jugados:
+    path:     /partidos_jugados
+    defaults: { _controller: AppBundle:Default:partidosJugados }
+
+goles_anotados:
+    path:     /goles_anotados
+    defaults: { _controller: AppBundle:Default:golesAnotados }
+
+asistencias:
+    path:     /asistencias
+    defaults: { _controller: AppBundle:Default:asistencias }
+
+tarjetas:
+    path:     /tarjetas
+    defaults: { _controller: AppBundle:Default:tarjetas }
+
+atajadas:
+    path:     /atajadas
+    defaults: { _controller: AppBundle:Default:atajadas }
+
+consolidada:
+    path:     /consolidada
+    defaults: { _controller: AppBundle:Default:consolidada }
+
+detalle_partido:
+    path:     /detalle_partido
+    defaults: { _controller: AppBundle:Default:detallePartido }

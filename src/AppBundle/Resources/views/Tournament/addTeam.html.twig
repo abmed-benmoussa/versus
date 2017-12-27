@@ -1,0 +1,86 @@
+{% extends 'AppBundle::inicio.html.twig' %}
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="margenes margen-regular anchoLibre">
+            <img id="img-superior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/titleHead/creaTuTorneo.svg') }}" alt="">
+            <div class="miContenedor bg-black"  style="min-height:300px">
+                <div class="container">
+                    <div class="row">
+                        <form action="" method="post">
+                            <div class="col-md-2">
+                                <div class="team-counter text-center">
+                                    <span>{{entity.tournamentTeams.count}}</span>
+                                    <strong> / {{entity.numeroEquipos}}</strong>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                {% set team_list = [] %}
+                                {% for team in teams %}
+                                    {% set team_list = team_list|merge([team]) %}
+                                {% endfor %}
+                                <div>
+                                    <div class="form-group">
+                                        <label class="ct-label" for="">Nombre del equipo</label>
+                                        <div class="input-group input-group-big">
+                                            <input name="team_name" class="form-name form-control input-lg ct-input-especial typeahead" placeholder="Nombre del Equipo" type="text" data-list="{{team_list|join('|')}}">
+                                            <div class="input-group-addon ct-addon-especial">
+                                                <i style="font-size:20px;border-bottom: 1px solid #505050" class="fa fa-pencil"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <button class="btn btn-load-team btn-block btn-danger" disabled>
+                                    Agregar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row">
+                        {% for tournamentTeam in entity.tournamentTeams %}
+                            <div class="col-md-3 team-container">
+                                <div class="team-line">
+                                    {% if not tournamentTeam.team.image %}
+                                        <div class="avatar img-circle img-thumbnail trigger-avatar"></div>
+                                    {% else %}
+                                        {%set imagen=tournamentTeam.team.image|split('images')|last %}
+                                        <img src="{{ asset('/uploads/images' ~ imagen) }}" class="avatar img-circle img-thumbnail" alt="avatar" width="80" height="80" style="height:80px">
+                                    {% endif %}
+                                    <p>{{tournamentTeam.team}}</p>
+                                    <a href="{{path('app_tournament_add_team_remove', {id:entity.id, ttid:tournamentTeam.id})}}" class="btn btn-link text-danger btn-remove-team" title="Eliminar equipo">
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="row">
+                        <br><br>
+                        <div class="col-md-offset-4 col-md-4 tournament-team-action">
+                            <a href="{{path('app_tournament_step', {id:entity.id, nextstep:1})}}" class="btn bg-gray-trans btn-scuare  btn-rounded  btn-block text-gray-light" data-action="edit">
+                                <img class="img-svg-size" src="{{ asset('bundles/app/images/gallery/icons/creaTorneo.svg') }}" alt="">
+                                Editar Torneo
+                            </a>
+                            {% if entity.tournamentTeams.count == entity.numeroEquipos %}
+                            <a href="{{path('app_tournament_step', {id:entity.id, nextstep:3})}}" class="btn bg-gray-trans btn-scuare  btn-rounded  btn-block text-gray-light" data-action="generate">
+                                <img class="img-svg-size" src="{{ asset('bundles/app/images/gallery/icons/creaTorneo.svg') }}" alt="">
+                                Generar emparejamientos
+                            </a>
+                            {% endif %}
+                            <br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img id="img-inferior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
+{% block javascripts %}
+<script src="{{ asset('bundles/app/js/modules/tournament_addteam.js') }}" type="text/javascript"></script>
+{% endblock %}

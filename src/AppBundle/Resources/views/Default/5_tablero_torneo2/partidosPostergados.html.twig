@@ -1,0 +1,241 @@
+{% extends 'AppBundle::inicio.html.twig' %}
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="margenes margen-regular anchoLibre">
+            <img id="img-superior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/titleHead/tableroTorneo.svg') }}" alt="">
+            <div class="miContenedor bg-white">
+                <div class="container">
+                	<br>
+                	<div class="row">
+						<div class="col-md-12">
+							<div class="partidos_postergados-title" style="font-weight: bold; color:#465058;font-size: 30px; PADD">
+								<img style="width: 50px; height: 50px;"  class="img-thumbnail-none"  src="{{ asset('bundles/app/images/gallery/icons/compartirEstadisticas.svg') }}" alt=""> PARTIDOS POSTERGADOS
+							</div>
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="con-md-12">
+							<div class="scroll">
+								<table id="partidos_postergados-table" class="table table-responsive">
+									<thead >
+										<tr class="bg-danger">
+											<th class="text-center">COMPETICIÓN/DUELO</th>
+											<th class="text-center">FECHA</th>
+											<th class="text-center">HORA</th>
+											<th>LUGAR</th>
+										</tr>
+										<tr>
+											<td colspan="4" style="height:10px;"></td>
+										</tr>
+									</thead>
+									<tbody class="fondo-blanco">
+										<tr style="border-top:2px solid #465059;">
+											<td style="width:40% !important; padding-left:3%">
+												<div class="container-postergados">
+													<div class="row">
+														<div class="col-md-12 text-center text-white" style="background-color:#465059;font-weight:bold;padding:2%">
+															Torneo Empresarial 2017 #1
+														</div>
+													</div>
+													<div class="row" style="color:#465059;">
+														<div class="col-md-4 text-center" style="font-weight:bold">
+
+															<i class="fa fa-shield" style="font-size:30px"></i> Equipo 1
+														</div>
+														<div class="col-md-4 text-center" style="font-weight:bold">
+															VS
+														</div>
+														<div class="col-md-4 text-center" style="font-weight:bold">
+															<i class="fa fa-shield" style="font-size:30px"></i> Equipo 2
+														</div>
+													</div>
+												</div>
+											</td>
+											<td style="width:15% !important;">
+												<div class="container-postergados">
+													<div class="row">
+														<div class="col-md-12 text-center" style="color:#465059;">
+															MARTES <br> 21/01/2017 <br><br>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-12">
+															<a href="" class="btn btn-danger btn-block" style="font-weight:bold; font-size:10px;padding:3%">Cambiar Fecha</a>
+														</div>
+													</div>
+												</div>
+											</td>
+											<td style="width:15% !important;">
+												<div class="row">
+													<div class="col-md-12 text-center" style="color:#465059;">
+														20:00	<br><br><br>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														<a href="" class="btn btn-danger btn-block" style="font-weight:bold; font-size:10px;padding:3%">Cambiar Hora</a>
+													</div>
+												</div>
+											</td>
+											<td style="width:30% !important; padding-right:3%">
+												<div class="row">
+													<div class="col-md-12" style="color:#465059;">
+														<b>Futbol City 1:</b> <br>
+														Calle Naranjos y granados atrás de Gama Tv - C2	<br> <br>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														<center>
+														<a href="" class="btn btn-danger" style="font-weight:bold;height: 25px;padding-top: 5px !important; font-size:10px;padding:3%">Cambiar Hora</a>
+														</center>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr style="border-top:2px solid #465059;">
+											<td style="width:40% !important; padding-left:3%">
+												<div class="container-postergados">
+													<div class="row">
+														<div class="col-md-12 text-center text-white" style="background-color:#465059;font-weight:bold;padding:2%">
+															Torneo Empresarial 2017 #1
+														</div>
+													</div>
+													<div class="row" style="color:#465059;">
+														<div class="col-md-4 text-center" style="font-weight:bold">
+
+															<i class="fa fa-shield" style="font-size:30px"></i> Equipo 1
+														</div>
+														<div class="col-md-4 text-center" style="font-weight:bold">
+															VS
+														</div>
+														<div class="col-md-4 text-center" style="font-weight:bold">
+															<i class="fa fa-shield" style="font-size:30px"></i> Equipo 2
+														</div>
+													</div>
+												</div>
+											</td>
+											<td style="width:15% !important;">
+												<div class="container-postergados">
+													<div class="row">
+														<div class="col-md-12 text-center" style="color:#465059;">
+															MARTES <br> 21/01/2017 <br><br>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-12">
+															<a href="" class="btn btn-danger btn-block" style="font-weight:bold; font-size:10px;padding:3%">Cambiar Fecha</a>
+														</div>
+													</div>
+												</div>
+											</td>
+											<td style="width:15% !important;">
+												<div class="row">
+													<div class="col-md-12 text-center" style="color:#465059;">
+														20:00	<br><br><br>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														<a href="" class="btn btn-danger btn-block" style="font-weight:bold; font-size:10px;padding:3%">Cambiar Hora</a>
+													</div>
+												</div>
+											</td>
+											<td style="width:30% !important; padding-right:3%">
+												<div class="row">
+													<div class="col-md-12" style="color:#465059;">
+														<b>Futbol City 1:</b> <br>
+														Calle Naranjos y granados atrás de Gama Tv - C2	<br> <br>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														<center>
+														<a href="" class="btn btn-danger" style="font-weight:bold;height: 25px;padding-top: 5px !important; font-size:10px;padding:3%">Cambiar Hora</a>
+														</center>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr style="border-top:2px solid #465059;">
+											<td style="width:40% !important; padding-left:3%">
+												<div class="container-postergados">
+													<div class="row">
+														<div class="col-md-12 text-center text-white" style="background-color:#465059;font-weight:bold;padding:2%">
+															Torneo Empresarial 2017 #1
+														</div>
+													</div>
+													<div class="row" style="color:#465059;">
+														<div class="col-md-4 text-center" style="font-weight:bold">
+
+															<i class="fa fa-shield" style="font-size:30px"></i> Equipo 1
+														</div>
+														<div class="col-md-4 text-center" style="font-weight:bold">
+															VS
+														</div>
+														<div class="col-md-4 text-center" style="font-weight:bold">
+															<i class="fa fa-shield" style="font-size:30px"></i> Equipo 2
+														</div>
+													</div>
+												</div>
+											</td>
+											<td style="width:15% !important;">
+												<div class="container-postergados">
+													<div class="row">
+														<div class="col-md-12 text-center" style="color:#465059;">
+															MARTES <br> 21/01/2017 <br><br>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-12">
+															<a href="" class="btn btn-danger btn-block" style="font-weight:bold; font-size:10px;padding:3%">Cambiar Fecha</a>
+														</div>
+													</div>
+												</div>
+											</td>
+											<td style="width:15% !important;">
+												<div class="row">
+													<div class="col-md-12 text-center" style="color:#465059;">
+														20:00	<br><br><br>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														<a href="" class="btn btn-danger btn-block" style="font-weight:bold; font-size:10px;padding:3%">Cambiar Hora</a>
+													</div>
+												</div>
+											</td>
+											<td style="width:30% !important; padding-right:3%">
+												<div class="row">
+													<div class="col-md-12" style="color:#465059;">
+														<b>Futbol City 1:</b> <br>
+														Calle Naranjos y granados atrás de Gama Tv - C2	<br> <br>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														<center>
+														<a href="" class="btn btn-danger" style="font-weight:bold;height: 25px;padding-top: 5px !important; font-size:10px;padding:3%">Cambiar Hora</a>
+														</center>
+													</div>
+												</div>
+											</td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+                </div>
+            </div>
+            <img id="img-inferior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

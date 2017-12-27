@@ -1,0 +1,72 @@
+BackendBundle\Entity\Jugadores:
+    type: entity
+    table: jugadores
+    indexes:
+        fk_jugadores_equipos1_idx:
+            columns:
+                - equipos_id
+
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        goles:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        atajadas:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        asistencias:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        imagen:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        imageFile:
+            mapping: jugador_images
+            filename_property: imagen
+            nullable: true
+        updatedAt:
+            type: datetime
+            nullable: true    
+        estado:
+            type: boolean
+            nullable: true
+    oneToOne:
+        equipos:
+            targetEntity: Equipos
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                equipos_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    manyToOne:
+        user:
+            targetEntity: User
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                user_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

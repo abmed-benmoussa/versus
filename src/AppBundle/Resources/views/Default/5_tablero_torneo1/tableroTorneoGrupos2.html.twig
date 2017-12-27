@@ -1,0 +1,167 @@
+{% extends 'AppBundle::inicio.html.twig' %}
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="margenes margen-regular anchoLibre">
+            <img id="img-superior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/titleHead/tableroTorneo.svg') }}" alt="">
+            <div class="miContenedor bg-white">
+                <div class="container">
+                	<br>
+            		<div class="row">
+            			<div class="col-md-4">
+            				<h4 class="text-gray" style="font-weight: bold;">
+								<img style="width: 50px; height: 50px;" src="{{ asset('bundles/app/images/gallery/icons/fixture_gris.svg') }}" alt="">
+								FIXTURE COMPLETO
+							</h4>
+            			</div>
+
+            			<div class="col-md-2">
+            				<a id="" class="btn btn-success btn-block text-white" href="{{path('info_equipos')}}">
+                                <div class="row" >
+                                    <div class="col-md-2 div-nowrap">
+
+                                    </div>
+                                    <div class="col-md-8 div-nowrap">
+                                         <b>TORNEO COMBINADO</b>
+                                    </div>
+                                </div>
+                            </a>
+
+            			</div>
+
+            			<div class="col-md-2">
+            				<a hid="torneoGrupos" class="btn  bg-gray-light btn-block"  style="height: 63px;vertical-align:middle;line-height:50px;text-align: :center"><img style="width: 50px; height: 50px;" src="{{ asset('bundles/app/images/gallery/icons/grupos.svg') }}" alt=""> <b>GRUPOS</b></a>
+            			</div>
+            			<div class="col-md-2">
+                            <a hid="torneoGrupos" class="btn btn-danger btn-block" style="height: 63px;vertical-align:middle;line-height:50px;text-align: :center"><b>LISTA</b></a>
+            			</div>
+            			<div class="col-md-2">
+            				<a hid="torneoGrupos" class="btn btn-danger btn-block" style="height: 63px;vertical-align:middle;line-height:50px;text-align: :center"><b>FECHAS</b></a>
+            			</div>
+            		</div>
+
+					<div class="row">
+		        		<div class="col-md-12">
+							<div class="row">
+								<div class="col-md-3">
+									<div class="panel-ttpf1 panel-default">
+										<div class="panel-heading  bg-danger text-white text-center">
+											<b> INFORMACIÓN</b>
+										</div>
+										<div class="panel-body">
+											<div class="panel-ttpf1 panel-default">
+												<div class="panel-heading bg-gray-light">
+													<h3 class="panel-title text-center text-gray2" style="font-weight:bold;font-size: 12px;">NÚMERO DE EQUIPOS</h3>
+												</div>
+												<div class="panel-body text-gray bg-white">
+													<b>8 Equipos</b> <span><i style="float: right" class="fa fa-pencil text-gray"></i></span>
+												</div>
+											</div>
+											<div class="panel-ttpf1 panel-default">
+												<div class="panel-heading bg-gray-light">
+													<h3 class="panel-title text-center text-gray2" style="font-weight:bold;font-size: 12px;">NÚMERO DE GRUPOS</h3>
+												</div>
+												<div class="panel-body text-gray bg-white">
+													<b>2 Grupos</b> <span><i style="float: right" class="fa fa-pencil text-gray"></i></span>
+												</div>
+											</div>
+											<div class="panel-ttpf1 panel-default">
+												<div class="panel-heading bg-gray-light">
+													<h3 class="panel-title text-center text-gray2" style="font-weight:bold;font-size: 12px;">EQUIPOS POR GRUPO</h3>
+												</div>
+												<div class="panel-body text-gray bg-white">
+													<b>4 Equipos por Grupo</b> <span><i style="float: right" class="fa fa-pencil text-gray"></i></span>
+												</div>
+											</div>
+											<div class="panel-ttpf1 panel-default">
+												<div class="panel-heading bg-gray-light">
+													<h3 class="panel-title text-center text-gray2" style="font-weight:bold;font-size: 12px;">PARTIDOS IDA Y VUELTA</h3>
+												</div>
+												<div class="panel-body text-gray bg-white">
+													<b>Partidos de Ida</b> <span><i style="float: right" class="fa fa-pencil text-gray"></i></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-9">
+									<div class="panel-ttpf1 panel-default">
+										<div class="panel-heading  bg-danger text-white">
+											<b> MODALIDADES DE TORNEO COMBINADO</b> <span style="float: right;font-weight: bold;">GRUPOS DEL TORNEO</span>
+										</div>
+										<div class="panel-body bg-white">
+											<div class="row">
+												<div class="col-md-5 col-md-offset-1">
+													<div class="ttpf1 panel-default">
+														<div class="panel-heading bg-danger text-white text-center">
+															<h1 class="panel-title" style="font-size: 20px;font-weight: bold;">GRUPO A</h1>
+														</div>
+														<div class="panel-body">
+															<a href="" style="text-align:left;padding-left: 4%;" class="btn bg-gray-light text-black btn-lg btn-block">
+																<img id="img-superior" style="width: 30px; height: 30px;" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+																<span style="font-size: 12px; font-weight: bold;">EQUIPO 1</span>
+															</a>
+															<a href="" style="text-align:left;padding-left: 4%;" class="btn bg-gray-light text-black btn-lg btn-block">
+																<img id="img-superior" style="width: 30px; height: 30px;" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+																<span style="font-size: 12px; font-weight: bold;">EQUIPO 4</span>
+															</a>
+															<a href="" style="text-align:left;padding-left: 4%;" class="btn bg-gray-light text-black btn-lg btn-block">
+																<img id="img-superior" style="width: 30px; height: 30px;" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+																<span style="font-size: 12px; font-weight: bold;">EQUIPO 5</span>
+															</a>
+															<a href="" style="text-align:left;padding-left: 4%;" class="btn bg-gray-light text-black btn-lg btn-block">
+																<img id="img-superior" style="width: 30px; height: 30px;" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+																<span style="font-size: 12px; font-weight: bold;">EQUIPO 8</span>
+															</a>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-5">
+													<div class="ttpf1 panel-default">
+														<div class="panel-heading bg-danger text-white text-center">
+															<h1 class="panel-title" style="font-size: 20px;font-weight: bold;">GRUPO B</h1>
+														</div>
+														<div class="panel-body">
+															<a href="" style="text-align:left;padding-left: 4%;" class="btn bg-gray-light text-black btn-lg btn-block">
+																<img id="img-superior" style="width: 30px; height: 30px;" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+																<span style="font-size: 12px; font-weight: bold;">EQUIPO 2</span>
+															</a>
+															<a href="" style="text-align:left;padding-left: 4%;" class="btn bg-gray-light text-black btn-lg btn-block">
+																<img id="img-superior" style="width: 30px; height: 30px;" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+																<span style="font-size: 12px; font-weight: bold;">EQUIPO 3</span>
+															</a>
+															<a href="" style="text-align:left;padding-left: 4%;" class="btn bg-gray-light text-black btn-lg btn-block">
+																<img id="img-superior" style="width: 30px; height: 30px;" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+																<span style="font-size: 12px; font-weight: bold;">EQUIPO 6</span>
+															</a>
+															<a href="" style="text-align:left;padding-left: 4%;" class="btn bg-gray-light text-black btn-lg btn-block">
+																<img id="img-superior" style="width: 30px; height: 30px;" src="{{ asset('bundles/app/images/gallery/icons/escudo.svg') }}" alt="">
+																<span style="font-size: 12px; font-weight: bold;">EQUIPO 7</span>
+															</a>
+
+
+
+
+														</div>
+													</div>
+												</div>
+											</div>
+											<br><br><br><br><br>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+                </div>
+            </div>
+            <img id="img-inferior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

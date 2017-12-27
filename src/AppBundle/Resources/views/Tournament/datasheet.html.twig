@@ -1,0 +1,41 @@
+{% extends 'AppBundle::inicio.html.twig' %}
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+    <div class="row">
+        <div class="col-md-12 ">
+            <img class="img-thumbnail-none margen-superior" src="{{ asset('bundles/app/images/titleHead/misTorneos.svg') }}" alt="">
+            <div class="bg-white margen-misTorneos">
+                <div class="row" style="padding:1%">
+                    <div class="col-md-4">
+                        <a class="btn btn-scuare btn-datasheet btn-block btn-danger" href="{{path('app_tournament_show',{id: entity.id, viewtype:'dates'})}}">
+                            <img class="img-svg-size pull-left" src="{{ asset('bundles/app/images/gallery/icons/fecha.svg') }}" alt="">
+                            Por Fechas
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="btn btn-scuare btn-datasheet btn-block btn-danger" href="{{path('app_tournament_show',{id: entity.id, viewtype:'groups'})}}">
+                            <img class="img-svg-size pull-left" src="{{ asset('bundles/app/images/gallery/icons/grupos.svg') }}" alt="">
+                            Por Grupos
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="btn btn-scuare btn-datasheet btn-block btn-danger" href="{{path('app_tournament_show',{id: entity.id, viewtype:'fixtures'})}}">
+                            <img class="img-svg-size pull-left" src="{{ asset('bundles/app/images/gallery/icons/infoEquipos.svg') }}" alt="">
+                            Por Fixtures
+                        </a>
+                    </div>
+                </div>
+                <div class="row" style="padding:1%">
+                    <div class="col-md-6 col-md-offset-3">
+                        <a class="btn btn-scuare btn-datasheet btn-block btn-danger">
+                            <img class="img-svg-size pull-left" src="{{ asset('bundles/app/images/gallery/icons/infoEquipos.svg') }}" alt="">
+                            Información por Equipos
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <img class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+            <div class="clearfix"></div>
+        </div>
+      </div>
+{% endblock %}

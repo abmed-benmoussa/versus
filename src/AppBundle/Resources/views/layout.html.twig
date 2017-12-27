@@ -1,0 +1,44 @@
+{% extends '::base.html.twig' %}
+{% block layout %} <div> {% endblock %}
+  {% block body %}
+    {% block menu %}
+
+    {% endblock menu %}
+    <!--BEGIN PAGE WRAPPER-->
+    <div id="">
+      <!--BEGIN CONTENT-->
+      <div class="page-content">
+        <div id="tab-general">
+          {% block marcoContenido %}
+            <div class="">
+              <div class="col-lg-12">
+                {% block colorMarcoContenido %}<div class="panelGolppBlnco">{% endblock%}
+                  <div class="panel-body">
+                    <div class="col-md-6 col-md-offset-3">
+                    {%for message in app.session.flashbag().get('status')%}
+                        <div class="alert alert-danger">{{message}}</div>
+                    {%endfor%}
+                    </div>
+                    {% block contenidos %}
+
+                    {% endblock%}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endblock%}
+        </div>
+      </div>
+      <!--END CONTENT-->
+    </div>
+    <!--END PAGE WRAPPER-->
+    <!--BEGIN FOOTER-->
+    {#<div class="page-footer">
+      <div class="copyright text-center">
+        {% block footer %}
+          2017 CopyRight Golpp
+        {% endblock %}
+      </div>
+    </div>#}
+    <!--END FOOTER-->
+  {% endblock %}

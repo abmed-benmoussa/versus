@@ -1,0 +1,135 @@
+<div id="modal-tournament-modality" class="modal fade" tabindex="-1" role="dialog" data-title-format="Modalidad de Torneo {0}">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="row">
+                <div id="modal-title" class="col-md-12"><p style="font-size: 20px; color:#505050;font-weight: bold;padding: 10px 15px;margin-bottom: 0px;border-bottom: 1px solid #505050;"></p></div>
+                <div class="col-md-4" style="padding-right:0px" >
+                    <img class="img-thumbnail" src="{{ asset('bundles/app/images/gallery/ModTorneo_3.jpg') }}" alt="">
+                </div>
+                <div class="col-md-8">
+                    <div class="row group-modality">
+                        <div class="col-md-12">
+                            <div class="row title-group hide">
+                                <div class="col-md-12" style="font-size: 18px; color:#505050;font-weight: bold;padding:6px 15px;">
+                                    Grupos
+                                </div>
+                                <div class="col-md-12">
+                                    <hr style="border: 1px dashed #505050;margin:0px;">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <p style="font-weight: bold;color: #505050;font-size: 10px; margin-top: 10%;margin-bottom: 10%;">
+                                        NÚMERO DE GRUPOS:
+                                    </p>
+                                </div>
+                                <div  class="col-md-7" >
+                                    <p id="groups-number" data-value-format="{0} Grupo(s)" style="font-weight: bold;color: #505050;font-size: 16px; margin-top: 10px;margin-bottom: 10px;"></p>
+                                </div>
+                            </div>
+                            <hr style="border: 1px dashed #505050;margin:0px;">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <p style="font-weight: bold;color: #505050;font-size: 10px; margin-top: 10%;margin-bottom: 10%;">
+                                        EQUIPOS POR GRUPO:
+                                    </p>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="input-group">
+                                        {{ form_widget(form.teamsPerGroups) }}
+                                        <div style="background-color: transparent;border:0px;" class="input-group-addon">
+                                            <i style="font-size:20px;border-bottom: 1px solid #505050" class="fa fa-pencil"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr style="border: 1px dashed #505050;margin:0px;">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <p style="font-weight: bold;color: #505050;font-size: 10px; margin-top: 10%;margin-bottom: 10%;">
+                                        EQUIPOS QUE CLASIFICAN POR GRUPO:
+                                    </p>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="input-group">
+                                           {{ form_widget(form.qualifiedTeams) }}
+                                          <div style="background-color: transparent;border:0px;" class="input-group-addon">
+                                              <i style="font-size:20px;border-bottom: 1px solid #505050" class="fa fa-pencil"></i>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr style="border: 1px dashed #505050;margin:0px;">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <p style="font-weight: bold;color: #505050;font-size: 10px; margin-top: 10%;margin-bottom: 10%;">
+                                        MODALIDAD DE PARTIDO:
+                                    </p>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="input-group">
+                                          {{ form_widget(form.groupMatchModality) }}
+                                          <div style="background-color: transparent;border:0px;" class="input-group-addon">
+                                              <i style="font-size:20px;border-bottom: 1px solid #505050" class="fa fa-pencil"></i>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr style="border: 1px dashed #505050;margin:0px;">
+                        </div>
+                    </div>
+                    <div class="row playoff-modality">
+                        <div class="col-md-12">
+                            <div class="row title-playoff hide">
+                                <div class="col-md-12" style="font-size: 18px; color:#505050;font-weight: bold; padding:6px 15px;">
+                                    Playoff
+                                </div>
+                                <div class="col-md-12">
+                                    <hr style="border: 1px dashed #505050;margin:0px;">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <p style="font-weight: bold;color: #505050;font-size: 10px; margin-top: 10%;margin-bottom: 10%;">
+                                        MODALIDAD DE PARTIDO:
+                                    </p>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="input-group">
+                                        {{ form_widget(form.playoffMatchModality) }}
+                                        <div style="background-color: transparent;border:0px;" class="input-group-addon">
+                                            <i style="font-size:20px;border-bottom: 1px solid #505050" class="fa fa-pencil"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr style="border: 1px dashed #505050;margin:0px;">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <p style="font-weight: bold;color: #505050;font-size: 10px; margin-top: 10%;margin-bottom: 10%;">
+                                        ELECCIÓN DE PLAYOFF DESDE:
+                                    </p>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="input-group">
+                                        {{ form_widget(form.playoffInstance) }}
+                                        <div style="background-color: transparent;border:0px;" class="input-group-addon">
+                                            <i style="font-size:20px;border-bottom: 1px solid #505050" class="fa fa-pencil"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr style="border: 1px dashed #505050;margin:0px;">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center" style="font-size: 20px; color:#505050"><br>
+                            <a data-dismiss='modal' class="btn btn-danger" style="background-color: #F0424B;width: 200px;height: 40px; font-size: 20px;font-weight: bold">Aceptar</a>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

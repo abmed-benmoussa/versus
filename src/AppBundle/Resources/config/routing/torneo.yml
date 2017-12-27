@@ -1,0 +1,22 @@
+app_tournament_index:
+    path: /
+    defaults: { _controller: AppBundle:Torneos:list }
+app_tournament_new:
+    path: /crear
+    defaults: { _controller: AppBundle:Torneos:new }
+app_tournament_show:
+    path: /{id}/ver
+    defaults: { _controller: AppBundle:Torneos:show }
+app_tournament_edit:
+    path: /{id}/editar
+    defaults: { _controller: AppBundle:Torneos:edit }
+app_tournament_team_information:
+   path: /{id}/informacion-equipos
+   defaults: { _controller: AppBundle:Torneos:teamInformation }
+app_tournament_view_teams:
+    path: /{id}/ver-equipos
+    defaults: { _controller: AppBundle:Torneos:viewTeams }
+
+# revisa-calendario:
+#     path: /revisa-calendario/{id}
+#     defaults: { _controller: AppBundle:Torneos:home }

@@ -1,0 +1,38 @@
+{% extends 'AppBundle::inicio.html.twig' %}
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+
+<div class="row">
+    <div class="col-md-12 ">
+        <div class="margenes margen-regular ">
+            <img id="img-superior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/titleHead/publicar.svg') }}" alt="">
+            <div class="miContenedor bg-white">
+                <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3">
+                                <div class="fondo-redes margenes-internos">
+                                    <div class="text-center">
+                                        <img class="img-thumbnail-none margen-superior" src="{{ asset('bundles/app/images/gallery/facebook.png') }}" alt="">
+                                        <br><br>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div class="text-success text-center">
+                                        <h3>Registro Exitoso <br>de su cuenta</h3>
+
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <a href="{{path('danger_facebook')}}" class="btn btn-facebook btn-lg btn-block"><b>OK</b></a>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <img id="img-inferior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

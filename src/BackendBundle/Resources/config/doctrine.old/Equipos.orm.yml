@@ -1,0 +1,51 @@
+BackendBundle\Entity\Equipos:
+    type: entity
+    repositoryClass: \BackendBundle\Repository\EquiposRepository
+    table: equipos
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombre:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        logo:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        imageFile:
+            mapping: equipo_images
+            filename_property: logo
+            nullable: true
+        grupo:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        numero:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        updatedAt:
+            type: datetime
+            nullable: true
+    manyToMany:
+        torneos:
+            targetEntity: Torneos
+            mappedBy: equipos
+            cascade: ["persist"]
+    lifecycleCallbacks: {  }

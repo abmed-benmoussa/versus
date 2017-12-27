@@ -1,0 +1,45 @@
+{% extends 'AppBundle::layout.html.twig' %}
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="margenes">
+            <img id="img-superior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/titleHead/iniciarSesion.svg') }}" alt="">
+            <div class="miContenedor margen-login bg-black">
+                <div class="container">
+                    <div class="text-center">
+                        <h3>Acceso a la plataforma</h3>
+                        <br><br>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                        <input type="text" class="form-control input-lg" id="" placeholder="Nombre de usuario">
+                    </div>
+
+
+                    <br>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-key"></i></div>
+                        <input type="password" class="form-control input-lg" id="" placeholder="Contraseña">
+                    </div>
+                    <br>
+                    <br>
+                    <a href="{{path('inicio')}}" class="btn btn-danger btn-lg btn-block">Ingresar</a>
+                    <br>
+                    <a href="{{path('olvido_contrasena')}}" class="text-center"><h4>Olvidó su contraseña</h4></a>
+                </div>
+            </div>
+            <img id="img-inferior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+            <img id="balon" class="balon img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/balon.png') }}" alt="">
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <img id="img-superior" class="img-thumbnail-none publicidad1" src="{{ asset('bundles/app/images/publicidad/publicidad1.png') }}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

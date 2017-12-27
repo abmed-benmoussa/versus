@@ -1,0 +1,40 @@
+{% extends 'AppBundle::inicio.html.twig' %}
+{% block colorMarcoContenido %}<div class="panelGolpp">{% endblock%}
+{% block contenidos %}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="margenes margen-regular anchoLibre">
+            <img id="img-superior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/titleHead/tableroTorneo.svg') }}" alt="">
+            <div class="miContenedor bg-white">
+                <div class="container">
+                	<br>
+					<div class="row">
+						<div class="col-md-10">
+							<div class="partidos_postergados-title" style="font-weight: bold; color:#465058;font-size: 30px; PADD">
+								<img style="width: 50px; height: 50px;"  class="img-thumbnail-none"  src="{{ asset('bundles/app/images/gallery/icons/compartirEstadisticas.svg') }}" alt=""> COMPARTIR TABLA DE GOLEADORES
+							</div>
+						</div>
+						<div class="col-md-2">
+							<a href="">
+								<img class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/icons/btnCompartir.svg') }}" alt="">
+							</a>
+						</div>
+					</div>
+					<div class="tableroTpanel panel-danger">
+						<div class="panel-heading bg-danger" style="color:white !important; font-weight: bold;">TU PUBLICACIÓN</div>
+						<div class="panel-body bg-white">
+							<div style="margin-left:25%;margin-right:20%;">
+								<img  style="border:8px solid #F6F6F6 !important; width: 80%; padding:0px" class="img-thumbnail" src="{{ asset('bundles/app/images/gallery/compartirGoleadores.jpg') }}" alt="">
+							</div>
+
+						</div>
+					</div>
+                </div>
+            </div>
+            <img id="img-inferior" class="img-thumbnail-none" src="{{ asset('bundles/app/images/gallery/borderInferior.png') }}" alt="">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

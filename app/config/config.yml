@@ -1,0 +1,274 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+    - { resource: services.yml }
+    - { resource: "@BackendBundle/Resources/config/services.yml" }
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+    locale: en
+    app.path.torneo_images: /uploads/images/torneos
+    app.path.comunicacion_images: /uploads/images/comunicaciones
+    app.path.equipo_images: /uploads/images/equipos
+    app.path.jugador_images: /uploads/images/jugadores
+
+framework:
+    #esi: ~
+    #translator: { fallbacks: ['%locale%'] }
+    translator: ~
+    secret: '%secret%'
+    router:
+        resource: '%kernel.project_dir%/app/config/routing.yml'
+        strict_requirements: ~
+    form: ~
+    csrf_protection: ~
+    validation: { enable_annotations: true }
+    #serializer: { enable_annotations: true }
+    templating:
+        engines: ['twig']
+    default_locale: '%locale%'
+    trusted_hosts: ~
+    session:
+        # https://symfony.com/doc/current/reference/configuration/framework.html#handler-id
+        handler_id: session.handler.native_file
+        save_path: '%kernel.project_dir%/var/sessions/%kernel.environment%'
+        # cookie_lifetime: 120
+        # gc_maxlifetime: 60
+    fragments: ~
+    http_method_override: true
+    assets: ~
+    php_errors:
+        log: true
+
+# Twig Configuration
+twig:
+    debug: '%kernel.debug%'
+    strict_variables: '%kernel.debug%'
+
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver: pdo_mysql
+        host: '%database_host%'
+        port: '%database_port%'
+        dbname: '%database_name%'
+        user: '%database_user%'
+        password: '%database_password%'
+        charset: UTF8
+        # if using pdo_sqlite as your database driver:
+        #   1. add the path in parameters.yml
+        #     e.g. database_path: '%kernel.project_dir%/var/data/data.sqlite'
+        #   2. Uncomment database_path in parameters.yml.dist
+        #   3. Uncomment next line:
+        #path: '%database_path%'
+
+    orm:
+        auto_generate_proxy_classes: '%kernel.debug%'
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true
+
+# Swiftmailer Configuration
+swiftmailer:
+    transport: '%mailer_transport%'
+    host: '%mailer_host%'
+    username: '%mailer_user%'
+    password: '%mailer_password%'
+    spool: { type: memory }
+
+knp_paginator:
+    page_range: 5
+    default_options:
+        page_name: page
+        sort_field_name: sort
+        sort_direction_name: direction
+        distinct: true
+    template:
+        pagination: AppBundle:Layouts:custom_pagination.html.twig
+        sortable: knpPaginatorBundle:Pagination:sortable_link.html.twig
+
+easy_admin:
+    site_name: 'VRSUS'
+    entities:
+        User:
+            label: 'Usuarios'
+            class: BackendBundle\Entity\User
+            form:
+                fields:
+                    - username
+                    - email
+                    - enabled
+                    -
+                        property: plainPassword
+                        type: text
+                        type_options:
+                            required: false
+                    -
+                        property: roles
+                        type: choice
+                        type_options:
+                            multiple: true
+                            choices:
+                                ROLE_USER: ROLE_USER
+                                ROLE_ADMIN: ROLE_ADMIN
+                                ROLE_PLAYER: ROLE_PLAYER
+                                ROLE_REFEREE: ROLE_REFEREE
+
+        Tournament:
+            label: 'Torneos'
+            class: BackendBundle\Entity\Tournament
+            form:
+                fields:
+                    - name
+                    - fechaInicio
+                    - fechaFinal
+                    # - diasJugar
+                    - partidosDia
+                    # - duracionPartido
+                    # - horario
+                    - numeroEquipos
+                    - descripcion
+                    - tournamentType
+        Team:
+            label: 'Equipos'
+            class: BackendBundle\Entity\Team
+            form:
+                fields:
+                    - name
+                    - group
+                    - number
+                    - tournaments
+        TournamentType:
+            label: 'Tipo de Torneos'
+            class: BackendBundle\Entity\TournamentType
+            form:
+                fields:
+                    - name
+                    - action
+        PlayerPosition:
+            label: 'Posiciones de juego'
+            class: BackendBundle\Entity\PlayerPosition
+            form:
+                fields:
+                    - name
+                    - acronym
+        # Amonestaciones:
+        #     class: BackendBundle\Entity\Amonestaciones
+        # Canchas:
+        #     class: BackendBundle\Entity\Canchas
+        # Comunicaciones:
+        #     class: BackendBundle\Entity\Comunicaciones
+        #     form:
+        #         fields:
+        #             - observacion
+        #             #- imagen
+        #             - { property: 'imageFile', type: 'file' }
+        #             - enlace
+        #
+        #
+        # Jugadores:
+        #     class: BackendBundle\Entity\Jugadores
+        #     form:
+        #         fields:
+        #             - goles
+        #             - atajadas
+        #             - asistencias
+        #             - { property: 'imageFile', type: 'file' }
+        #             - estado
+        #             - equipos
+        #             - user
+        # Partidos:
+        #     class: BackendBundle\Entity\Partidos
+
+
+        #- BackendBundle\Entity\User
+        #- BackendBundle\Entity\Usuarios
+
+fos_user:
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+    firewall_name: main
+    user_class: BackendBundle\Entity\User
+    from_email:
+        address: "juanitourquiza@gmail.com"
+        sender_name: "Demo"
+    registration:
+        form:
+            type: AppBundle\Form\RegistrationType
+
+vich_uploader:
+    db_driver: orm
+    mappings:
+        torneo_images:
+            uri_prefix:         '%app.path.torneo_images%'
+            upload_destination: '%kernel.root_dir%/../web/uploads/images/torneos'
+
+        comunicacion_images:
+            uri_prefix:         '%app.path.comunicacion_images%'
+            upload_destination: '%kernel.root_dir%/../web/uploads/images/comunicaciones'
+
+        equipo_images:
+            uri_prefix:         '%app.path.equipo_images%'
+            upload_destination: '%kernel.root_dir%/../web/uploads/images/equipos'
+
+        jugador_images:
+            uri_prefix:         '%app.path.jugador_images%'
+            upload_destination: '%kernel.root_dir%/../web/uploads/images/jugadores'
+
+hwi_oauth:
+    connect:
+        account_connector: my.custom.user_provider
+    firewall_names:
+        - 'main' # name of security firewall configured to work with HWIOAuthBundle
+    fosub:
+        username_iterations: 30
+        properties:
+            facebook:    facebook_id
+            google:      google_id
+    resource_owners:
+        facebook:
+            type:                facebook
+            client_id:           221273248403766
+            client_secret:       10f8353424ca3e54421d02584016f458
+            #scope:               "email"
+            #scope:               ""
+            scope:               "email,public_profile,user_friends,user_birthday,user_location"
+
+        google:
+            type:                google
+            client_id:           68307277387-1fgo5b7e56mevaifhgav401qqn0g6utl.apps.googleusercontent.com
+            client_secret:       8zdwnR-EEmb82vjmUhAIORvJ
+            #scope:               "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile"
+            scope:               "email profile"
+
+services:
+    my.custom.user_provider:
+        class:     AppBundle\Security\Core\User\FOSUBUserProvider
+        arguments: ['@fos_user.user_manager', { facebook: facebook_id,google: google_id }]
+
+stof_doctrine_extensions:
+    default_locale: en_US
+    orm:
+        default:
+            sluggable: true
+            timestampable: true
+# ivory_google_map:
+#     map:
+#         debug:                    "%kernel.debug%"
+#         language:                 "%locale%"
+#         api_key:                  AIzaSyBLOLNajEEDXiDEUl339pHpUCxF0_-qL_I
+
+#    geocoder:
+#        client: httplug.client.default
+#        message_factory: httplug.message_factory.default
+#        format: json
+#        api_key:                  AIzaSyBLOLNajEEDXiDEUl339pHpUCxF0_-qL_I
+
+
+#httplug:
+#    classes:
+#        client: Http\Adapter\Guzzle6\Client
+#        message_factory: Http\Message\MessageFactory\GuzzleMessageFactory
+#    clients:
+#        acme:
+#            factory: httplug.factory.guzzle6

@@ -1,0 +1,133 @@
+{{ form_start(form, {attr:{action:path('app_player_edit',{id:entity.id})}}) }}
+<div class="row">
+    <div class="col-md-12 modal-title"><p>Datos del jugador</p></div>
+    <div class="col-md-12">
+        <div class="col-md-4 player-avatar">
+            {%set imagen=entity.user.image|split('images')|last %}
+            
+            {% if imagen is not empty %}
+              <img src="{{ asset('/uploads/images' ~ imagen) }}" style="margin:10px auto" class="avatar img-circle img-thumbnail trigger-avatar" alt="avatar" width="150">
+            {%else%}
+              <img src="{{ asset('/bundles/app/images/gallery/player.png') }}" style="margin:10px auto" class="avatar img-circle img-thumbail trigger-avatar" alt="avatar" width="150">
+            {%endif%}
+
+            <div class="hide">
+                {{ form_widget(form.image) }}
+            </div>
+        </div>
+        <div class="col-md-8 player-data">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row row-control">
+                        <div class="col-md-5"><p>Nombre:</p></div>
+                        <div class="col-md-7">
+                            <div class="input-group">
+                                {{ form_widget(form.firstName) }}
+                                <div class="input-group-addon"><i class="fa fa-pencil"></i></div>
+                            </div>
+                            {{ form_errors(form.firstName) }}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row row-control">
+                        <div class="col-md-5"><p>Apellido:</p></div>
+                        <div class="col-md-7">
+                            <div class="input-group"> 
+                                {{ form_widget(form.lastName) }}
+                                <div class="input-group-addon"><i class="fa fa-pencil"></i></div>
+                            </div>
+                            {{ form_errors(form.lastName) }}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row row-control">
+                        <div class="col-md-5"><p>Edad:</p></div>
+                        <div class="col-md-7">
+                            <div class="input-group">
+                                {{ form_widget(form.birthday) }}
+                                <div class="input-group-addon"><i class="fa fa-pencil"></i></div>
+                            </div>
+                            {{ form_errors(form.birthday) }}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row row-control">
+                        <div class="col-md-5"><p>Correo electrónico:</p></div>
+                        <div class="col-md-7">
+                            <div class="input-group">
+                                {{ form_widget(form.email) }}
+                                <div class="input-group-addon"><i class="fa fa-pencil"></i></div>
+                            </div>
+                            {{ form_errors(form.email) }}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row row-control">
+                        <div class="col-md-5"><p>Cedula:</p></div>
+                        <div class="col-md-7">
+                            <div class="input-group">
+                                {{ form_widget(form.document) }}
+                                <div class="input-group-addon"><i class="fa fa-pencil"></i></div>
+                            </div>
+                            {{ form_errors(form.document) }}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row row-control">
+                        <div class="col-md-5"><p>Teléfono:</p></div>
+                        <div class="col-md-7">
+                            <div class="input-group">
+                                {{ form_widget(form.phoneNumber) }}
+                                <div class="input-group-addon"><i class="fa fa-pencil"></i></div>
+                            </div>
+                            {{ form_errors(form.phoneNumber) }}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row row-control">
+                        <div class="col-md-5"><p>Número de Camiseta:</p></div>
+                        <div class="col-md-7">
+                            <div class="input-group">
+                                {{ form_widget(form.shirtNumber) }}
+                                <div class="input-group-addon"><i class="fa fa-pencil"></i></div>
+                            </div>
+                            {{ form_errors(form.shirtNumber) }}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row row-control">
+                        <div class="col-md-5"><p>Posiciones:</p></div>
+                        <div class="col-md-7">
+                            <div class="input-group">
+                                {{ form_widget(form.positions) }}
+                                <div class="input-group-addon"><i class="fa fa-pencil"></i></div>
+                            </div>
+                            {{ form_errors(form.positions) }}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row row-control">
+                        <div class="col-md-5"><p>Es Capitan?:</p></div>
+                        <div class="col-md-7">
+                            <div class="input-group">
+                                {{ form_widget(form.isCaptain) }}
+                                <div class="input-group-addon"><i class="fa fa-pencil"></i></div>
+                            </div>
+                            {{ form_errors(form.isCaptain) }}
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center" style="font-size: 20px; color:#505050"><br>
+                    <a data-dismiss='modal' class="btn btn-danger" style="background-color: #F0424B;height: 40px; font-size: 20px;font-weight: bold">Aceptar</a>
+                    <a class="btn btn-info btn-update" style="height: 40px; font-size: 20px;font-weight: bold">Actualizar</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+{{ form_rest(form) }}
+{{ form_end(form) }}
